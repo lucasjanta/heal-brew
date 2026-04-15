@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dgdowoohchep2"]
+
+[ext_resource type="Script" uid="uid://dq3hhe4i1bpka" path="res://scripts/Managers/scene_manager.gd" id="1_we8k5"]
+
+[node name="SceneManager" type="Node" unique_id=1146472373 node_paths=PackedStringArray("world_2D", "gui")]
+script = ExtResource("1_we8k5")
+world_2D = NodePath("world2d")
+gui = NodePath("CanvasLayer/GUI")
+
+[node name="world2d" type="Node2D" parent="." unique_id=1047554912]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1915786485]
+
+[node name="GUI" type="Control" parent="CanvasLayer" unique_id=747248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
