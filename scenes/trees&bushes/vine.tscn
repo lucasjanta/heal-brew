@@ -1,0 +1,84 @@
+[gd_scene format=4 uid="uid://jktahw8lt26"]
+
+[ext_resource type="Script" uid="uid://sn11un17cagi" path="res://scenes/trees&bushes/vine.gd" id="1_cshho"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_a0vld"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vrohm"]
+radius = 20.0
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_vrohm"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACAAAABQAQAAUklGRkgBAABXRUJQVlA4TDwBAAAvP8AHEDdAJmCxWz2fluK4lSITwfhV/1w6OKNVATIBi4VQQx/F/W4p5j8Akr7Vx3KexQNYte3WjaQiuDeN8t1ACIRCeAIIfxbxleQZBBH9d+C2bSRp9t5NwXZ/Yf9xLf43Bw1bEtwenHLcFmrnjq13pDnsV9gW9g6Z2+x0G7/lNuHQOe6PQaRPOHTu9GX83q13yHW1n272ihkHzRBpzfCr1nEQDCMHU++dA+vr50Lgi3JLjhyDsgXe4xBIcoylhanYeDLW2uF1xCsYrMIr6g5CHUwZmrAihoD3nDhScJBX5NPzG3XoBg6Xw8Tvx3Rc2eGDwNUgK5ChG20ciHQYNKjDyiUEmhfPjqng4y/2rsrBw+WsitJz0SrMpnIUQWFWjvpZfjfv4Iuk/i7ICQd+zeW949UVvePvD8bmstZh")
+size_override = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cshho"]
+atlas = SubResource("PortableCompressedTexture2D_vrohm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0vld"]
+atlas = SubResource("PortableCompressedTexture2D_vrohm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qdp0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cshho")
+}],
+"loop": true,
+"name": &"available",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0vld")
+}],
+"loop": true,
+"name": &"unavailable",
+"speed": 10.0
+}]
+
+[node name="vine" type="Area2D" unique_id=1453744679]
+script = ExtResource("1_cshho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2066951537]
+shape = SubResource("CircleShape2D_vrohm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1326823275]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qdp0x")
+animation = &"available"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/vine.aseprite",
+"source_uid": 5241247024014449454
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9b51abb1fca27935e01d911d42cc6a26"
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1067419947]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -30.0
+offset_right = 28.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_a0vld")
+theme_override_font_sizes/font_size = 6
+text = "Interact [E]"

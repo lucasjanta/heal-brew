@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cgw5tqctm1hxu"
+path="res://.godot/imported/vine.aseprite-8af3490b57934cd498bdc97a3d10c602.res"
+
+[deps]
+
+source_file="res://assets/vine.aseprite"
+dest_files=["res://.godot/imported/vine.aseprite-8af3490b57934cd498bdc97a3d10c602.res"]
+
+[params]
+
