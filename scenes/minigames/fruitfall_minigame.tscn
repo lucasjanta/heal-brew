@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://dg0gtc3j8emwe"]
 
+[ext_resource type="Script" uid="uid://dtoa7ayxqg3bq" path="res://scripts/minigames/fruitfall_minigame.gd" id="1_nq2ft"]
+
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_imi7f"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAACAAAAAUklGRngAAABXRUJQVlA4TGwAAAAvP8EsEB+gpm0DFudLh5CATKmaTiCQwhx+/gOY/zHAKLbtNC/OYoLK6vD7iZSscVfmRvRfQFDkghWYKCGEwJLiCds0hkgti3WuOXZa5/JtY4ma5fn9//73//vf/+9vx++Nc2pZhBBi0yDBNAA=")
 size_override = Vector2(320, 180)
@@ -8,7 +10,67 @@ size_override = Vector2(320, 180)
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAADuAQAAUklGRuYBAABXRUJQVlA4TNoBAAAvP8EsEBcgFkzx7tgSC6Z4bw6JBVM8iK7mP6D6g+TW2uJK+ljgDGypiIYQWPi31Kx7JJoa7Axg8X9hvsI8l/T3PEX034HbSIrkOsYa2H0EZjSaScYKvHPVjhA/ACqWSEFisfRE6Q8ay6bWlJ8PYo1Ea1xstmSHaksArN0AauybBkVrnL0fsncc/fid15o1ebdmebRmsidZO8799/e8lmgs/rBm+/k9b9jb99EaZ49YI/aOyx8/39/z5KrG7mdYg++vpHe27NbGtnZp5xwXWhQd8Pu9Levr2LL33tIlJJJZR63ayHrjbrKQLNLI8HjnVFrkZuqaKcmuWbyZR7IOKpbYWFw9dcvYyZzI7FSObtKlxEb6Ri5oJPuOyux0MNhykmMrbmdBp5EBj2SJWuaoPr3yqbhVi1NyQiVzB8olanbtPB/aCdjpH7lhJxesIjOSsuAoiM3FRmYXs4NuUBbfNes7HpwSF9TTFa3IkV9ri0/ikRo9+rxK4rC6vnacEcV3dfokZn/uu0rbRDNQC2rAKCvd0JUMRc4YpQZoAB6Lq9NQ1OmkMd9xt05XeegxdJWTuPcew8h8sjNcU7mcrIKh9BDF931wMUmuEo+LmfHmxPma1cFc/vvvv/9+sQA=")
 size_override = Vector2(320, 180)
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_6efnl"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAACIAQAAUklGRoABAABXRUJQVlA4THQBAAAvP8APEDegpm0jONdvasdDcGoaSYGT174lBuiRg0JIVqgH8RUIJuxQMpn/AKDkm9Gt9O3W/wHs2nbqOFIHupiZf9SBFxVoLTeQBwXk2X8N2AFu3EBE/x1KkmQZ1XHnTeIv5DpArlt2FMfk8DTJfAYp7jorzRxlVumnWx3mfXqfAyhnCVh0mA+maw7BYLLoEHvm44gPHTzye5nKoKOPLMdx7wmRMewJYOgQlchiQjjsPCnjeGmR24NwWDtrOnQApKNvHLBvAFOqfYUKtYIr1xrkCeBOvte6ORfAVhIXLiMcIqGWRRgH1MA5BBDSURycw9wT60jKOYp7utVh3qf3OYByloBFh/lguuYQDCaLDrFnPo74UCEcRx/pyLHg+N8TIoNxiEpkMSEcdjqVcby0yO1BOKydNaUcAOcA9g1gHKn2FcqBWsE5cq3BOQDMTpfp33y/fs+Jo8YwoG7j5qfi++RU3H38OwMZMwfGf3yoQWTskMmw7hA=")
+size_override = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv08p"]
+atlas = SubResource("PortableCompressedTexture2D_6efnl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh2s2"]
+atlas = SubResource("PortableCompressedTexture2D_6efnl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bufjo"]
+atlas = SubResource("PortableCompressedTexture2D_6efnl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqivr"]
+atlas = SubResource("PortableCompressedTexture2D_6efnl")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elag5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv08p")
+}],
+"loop": true,
+"name": &"back",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh2s2")
+}],
+"loop": true,
+"name": &"front",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bufjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqivr")
+}],
+"loop": true,
+"name": &"kick",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6efnl"]
+size = Vector2(14.666667, 24.666664)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq2ft"]
+size = Vector2(20, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv08p"]
+size = Vector2(320, 20)
+
 [node name="fruitfall_minigame" type="Node2D" unique_id=443309564]
+script = ExtResource("1_nq2ft")
 
 [node name="tronco" type="Sprite2D" parent="." unique_id=635374045]
 texture_filter = 1
@@ -65,3 +127,77 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 4641735365509918719
 }
 metadata/_aseprite_wizard_source_file_hash_ = "fe802202c7528d4e798c7a6823ead0a2"
+
+[node name="FruitSpawnPlaces" type="Node2D" parent="." unique_id=1822186866]
+
+[node name="Marker2D" type="Marker2D" parent="FruitSpawnPlaces" unique_id=670190706]
+position = Vector2(30, 13)
+
+[node name="Marker2D2" type="Marker2D" parent="FruitSpawnPlaces" unique_id=388035287]
+position = Vector2(51, 34)
+
+[node name="Marker2D3" type="Marker2D" parent="FruitSpawnPlaces" unique_id=1776927671]
+position = Vector2(77, 11)
+
+[node name="Marker2D4" type="Marker2D" parent="FruitSpawnPlaces" unique_id=651317982]
+position = Vector2(143, 41)
+
+[node name="Marker2D5" type="Marker2D" parent="FruitSpawnPlaces" unique_id=1293219471]
+position = Vector2(173, 12)
+
+[node name="Marker2D6" type="Marker2D" parent="FruitSpawnPlaces" unique_id=1446708753]
+position = Vector2(222, 37)
+
+[node name="Marker2D7" type="Marker2D" parent="FruitSpawnPlaces" unique_id=549978166]
+position = Vector2(245, 11)
+
+[node name="Marker2D8" type="Marker2D" parent="FruitSpawnPlaces" unique_id=324224552]
+position = Vector2(294, 24)
+
+[node name="Marker2D9" type="Marker2D" parent="FruitSpawnPlaces" unique_id=479708462]
+position = Vector2(278, 46)
+
+[node name="Marker2D10" type="Marker2D" parent="FruitSpawnPlaces" unique_id=646003323]
+position = Vector2(102, 39)
+
+[node name="fruitgame_witch" type="CharacterBody2D" parent="." unique_id=1550598302]
+position = Vector2(0, 155)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fruitgame_witch" unique_id=288102213]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_elag5")
+animation = &"kick"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/witch1.aseprite",
+"source_uid": 4433336176128941609
+}
+metadata/_aseprite_wizard_source_file_hash_ = "47debb371efe6d8f9c1edaeff4d685e0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fruitgame_witch" unique_id=322140752]
+position = Vector2(0, -3.6666641)
+shape = SubResource("RectangleShape2D_6efnl")
+
+[node name="ShakeArea" type="Area2D" parent="." unique_id=1250716765]
+position = Vector2(160, 140)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShakeArea" unique_id=817335799]
+shape = SubResource("RectangleShape2D_nq2ft")
+
+[node name="groundArea" type="Area2D" parent="." unique_id=1298546556]
+position = Vector2(160, 174)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="groundArea" unique_id=1027007606]
+shape = SubResource("RectangleShape2D_uv08p")

@@ -1,0 +1,67 @@
+[gd_scene format=4 uid="uid://d3qh3xmsxot87"]
+
+[ext_resource type="Script" uid="uid://svndowyjjm0m" path="res://scripts/minigames/red_fruit.gd" id="1_jaukn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ja56"]
+radius = 4.1231055
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_5ja56"]
+_data = PackedByteArray("AAADAAUAAAABAAAAEAAAAAgAAABiAAAAUklGRloAAABXRUJQVlA4TE4AAAAvD8ABEB8gEEhC2p9rGIFAkr/HPiOJBVO8M5zmPwBrH7AJADDJ9N7vlXzLIFCAPG5xaMJLj4j+h6WWznzmRzva0cZ6tLc808g+8/yWJgg=")
+size_override = Vector2(16, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jaukn"]
+atlas = SubResource("PortableCompressedTexture2D_5ja56")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csikr"]
+atlas = SubResource("PortableCompressedTexture2D_5ja56")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvsvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jaukn")
+}],
+"loop": true,
+"name": &"bad",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csikr")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 10.0
+}]
+
+[node name="red_fruit" type="Area2D" unique_id=266808186 groups=["fruits"]]
+script = ExtResource("1_jaukn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103667516]
+shape = SubResource("CircleShape2D_5ja56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=847587880]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_mvsvi")
+animation = &"normal"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/fruitred.aseprite",
+"source_uid": 6420976648553079522
+}
+metadata/_aseprite_wizard_source_file_hash_ = "68ea4e47127c67f18dfefc5c34576d14"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

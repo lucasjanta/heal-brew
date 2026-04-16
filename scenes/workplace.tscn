@@ -1,3 +1,100 @@
-[gd_scene format=3 uid="uid://csneyds0p2pe5"]
+[gd_scene format=4 uid="uid://csneyds0p2pe5"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_72r4b"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAmAAAAUklGRh4AAABXRUJQVlA4TBEAAAAvP8EsAAfQ9q43vf+BiOh/AAA=")
+size_override = Vector2(320, 180)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_gkndc"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAD6AAAAUklGRvIAAABXRUJQVlA4TOUAAAAvP8EsECdApG2bGx6fiKs5kbZtbnRsRq7gCtq2YYNttzH4/Db/AaB5nS/0B4iNJMltjhmwb5XAbQaLiUCy809KFN/j+jcj+j8B5fL/5f/L/1+II/OnRhaWUkaAoZTCwmGK+UMnOMXDjCwMzX0Vmj0hSROaba801+Y8D3tifugE7WnmCmyoU52xS536GvoCjeSEZQcLS04LctOc5OA1OheSKQ4kVXUewcG6jzmWGxxS09zd01OVWdyd1Hy/jPSQHIv0QOQGPOJwBtGv5k4H3t/pl3ttHbi/3/oleT2egJ5d/r/8/w9rAA==")
+size_override = Vector2(320, 180)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_3juwg"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABMAgAAUklGRkQCAABXRUJQVlA4TDgCAAAvP8EsEDegqG0jpr9xmz/Sg6KkjSQ4uXTZd4fOwqlt24ZNuW7ekvkPAAAMvrxDwX39DiDHtt22ITvgU8CeGKkAjypwaCAWgA36r0ECfsLXl7Mj+u/IbSNHkg+zeeXqSW84RZftXXQA0W2B4Da42yK47eWF2LaXt0LbNl8JLO23tpFxanh+Fyc/iXN4Uag+yF2zXPWoUP33Hz+suc0Gdlk3GJBsqtiHx3kGct8vY22SSm1DaCg9wFkUraPSoy/e7+iQAg64RNrQigp1GVtsR5yKD+pQyq2ksFUdIi6oR9zGM7zGraSMA+OxOvGOpOoKJQPE/o4prIZXisoiBJKO6pXCwfpjGAlV1wc3AKM9p1ZTtP68xgcafn91hrydBfKJOkKr4YgyClwNaRzVEYUduCsU5UxJ7K7jFc4C9SoAUDyDQtXTPYHcIp2BTlDRJtGlFUA4foAfMWdBl5sWsMuv2Bm4bgRJw7kTWrMF9BxnpkJipgZmmvM0XRrqBGVtgKZq57rImdBlnhaQaSwK1aiTKu0oOqfW95xWiXZCm4V2B9huVGkNZ9W+HmnddQU/td6RFmSMZ0ZYYD8tnHGvoEERusNMm7QGtA5VkbWjx6uqGDvXlP+lQJdAQJcw6ZcxEPod/d9/vuEYmDWLgoGJmxpF0rczq4MTJbIkGw+n8TC5f+JyeHnncnwwMMu8WX5nk5/YWJj9mmPNYSU+2Cc+doVssU9amv3+5eN4X2ex8gZmmTfzsZP+/iXE+6YT")
+size_override = Vector2(320, 180)
 
 [node name="Workplace" type="Node2D" unique_id=96866077]
+
+[node name="sky" type="Sprite2D" parent="." unique_id=2081283874]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_72r4b")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/workplace.aseprite",
+"source_uid": 6629427913549915013
+}
+metadata/_aseprite_wizard_source_file_hash_ = "74f8d23d752fed6a323d2377e0831979"
+
+[node name="ground" type="Sprite2D" parent="." unique_id=1481524005]
+texture_filter = 1
+position = Vector2(0, 15)
+texture = SubResource("PortableCompressedTexture2D_gkndc")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/workplace.aseprite",
+"source_uid": 6629427913549915013
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3ee2212ff32318628b7b16441e6cf9cd"
+
+[node name="cart" type="Sprite2D" parent="." unique_id=1108260460]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_3juwg")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/workplace.aseprite",
+"source_uid": 6629427913549915013
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9a666142b0bca96092f80bb9484c65ba"
