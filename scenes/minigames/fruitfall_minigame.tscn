@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://dg0gtc3j8emwe"]
 
 [ext_resource type="Script" uid="uid://dtoa7ayxqg3bq" path="res://scripts/minigames/fruitfall_minigame.gd" id="1_nq2ft"]
+[ext_resource type="Script" uid="uid://co7eww8gogxku" path="res://scripts/minigames/fruitgame_witch.gd" id="2_6efnl"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_uv08p"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_imi7f"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAACAAAAAUklGRngAAABXRUJQVlA4TGwAAAAvP8EsEB+gpm0DFudLh5CATKmaTiCQwhx+/gOY/zHAKLbtNC/OYoLK6vD7iZSscVfmRvRfQFDkghWYKCGEwJLiCds0hkgti3WuOXZa5/JtY4ma5fn9//73//vf/+9vx++Nc2pZhBBi0yDBNAA=")
@@ -55,9 +57,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fqivr")
 }],
-"loop": true,
+"loop": false,
 "name": &"kick",
-"speed": 10.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6efnl"]
@@ -161,13 +163,15 @@ position = Vector2(278, 46)
 position = Vector2(102, 39)
 
 [node name="fruitgame_witch" type="CharacterBody2D" parent="." unique_id=1550598302]
-position = Vector2(0, 155)
+position = Vector2(0, 149)
 scale = Vector2(1.5, 1.5)
+script = ExtResource("2_6efnl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="fruitgame_witch" unique_id=288102213]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_elag5")
 animation = &"kick"
+autoplay = "front"
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -201,3 +205,18 @@ position = Vector2(160, 174)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="groundArea" unique_id=1027007606]
 shape = SubResource("RectangleShape2D_uv08p")
+
+[node name="KickLabel" type="Label" parent="." unique_id=433835161]
+visible = false
+offset_left = 139.0
+offset_top = 110.0
+offset_right = 185.0
+offset_bottom = 118.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_uv08p")
+theme_override_font_sizes/font_size = 8
+text = "Kick [E]"
+
+[connection signal="animation_finished" from="fruitgame_witch/AnimatedSprite2D" to="fruitgame_witch" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="ShakeArea" to="." method="_on_shake_area_body_entered"]
+[connection signal="body_exited" from="ShakeArea" to="." method="_on_shake_area_body_exited"]
