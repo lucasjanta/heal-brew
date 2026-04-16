@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://rwforeqnt7wn" path="res://scripts/character/movable_witch.gd" id="1_fgs61"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls0og"]
-size = Vector2(14, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgs61"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ls0og"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAAAACAAAAD8AAAAUklGRvQAAABXRUJQVlA4TOgAAAAvP8AHEDegpm0jONdvasdDcGoaSYGT174lBuiRg0JIVqgH8RUIJuxQMpn/AKDkm9Gt9O3W/4Gz2nrbRmKgL+u/xCDHCDIIdBhAJ38MGbJ1QiCi/wzctm0kddw+vYOOAnS0ukMNhWlNAbFSiJpxiabUoSV0Wy7tENvk6zoA3WmAyg4xR67rIDhSZQfJ0K3r9GLnzv8gk8O6GaSb1msXTB1cBgBuBzFNHQkFOmRfONJxy1OX+0CH5J3MbgcQ7Nj0AcYWiNCkTQ2BlBCjS2kKLkBssTGl1mIAUbSJgYOBDqKJpSOKdIAFlR0E")
@@ -79,7 +78,7 @@ _data = {
 script = ExtResource("1_fgs61")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487981958]
-shape = SubResource("RectangleShape2D_ls0og")
+shape = SubResource("CircleShape2D_fgs61")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1826488096]
 texture_filter = 1

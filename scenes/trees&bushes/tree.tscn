@@ -82,3 +82,6 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_0l2jq")
 theme_override_font_sizes/font_size = 6
 text = "Interact [E]"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
