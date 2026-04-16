@@ -1,0 +1,108 @@
+[gd_scene format=4 uid="uid://ynu1r3qkfd4g"]
+
+[ext_resource type="Script" uid="uid://rwforeqnt7wn" path="res://scripts/character/movable_witch.gd" id="1_fgs61"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ls0og"]
+size = Vector2(14, 32)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ls0og"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACAAAAD8AAAAUklGRvQAAABXRUJQVlA4TOgAAAAvP8AHEDegpm0jONdvasdDcGoaSYGT174lBuiRg0JIVqgH8RUIJuxQMpn/AKDkm9Gt9O3W/4Gz2nrbRmKgL+u/xCDHCDIIdBhAJ38MGbJ1QiCi/wzctm0kddw+vYOOAnS0ukMNhWlNAbFSiJpxiabUoSV0Wy7tENvk6zoA3WmAyg4xR67rIDhSZQfJ0K3r9GLnzv8gk8O6GaSb1msXTB1cBgBuBzFNHQkFOmRfONJxy1OX+0CH5J3MbgcQ7Nj0AcYWiNCkTQ2BlBCjS2kKLkBssTGl1mIAUbSJgYOBDqKJpSOKdIAFlR0E")
+size_override = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgs61"]
+atlas = SubResource("PortableCompressedTexture2D_ls0og")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey0kc"]
+atlas = SubResource("PortableCompressedTexture2D_ls0og")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tb3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgs61")
+}],
+"loop": true,
+"name": &"back",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey0kc")
+}],
+"loop": true,
+"name": &"front",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_ls0og"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fgs61"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14285715, 0.2857143, 0.42857143, 0.5714286),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ey0kc"]
+_data = {
+&"RESET": SubResource("Animation_ls0og"),
+&"walk": SubResource("Animation_fgs61")
+}
+
+[node name="movable_witch" type="CharacterBody2D" unique_id=825951129]
+script = ExtResource("1_fgs61")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487981958]
+shape = SubResource("RectangleShape2D_ls0og")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1826488096]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_5tb3n")
+animation = &"front"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/witch1.aseprite",
+"source_uid": 4433336176128941609
+}
+metadata/_aseprite_wizard_source_file_hash_ = "74b7c494b70c124c550a512c2a3c6141"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2111930790]
+libraries/ = SubResource("AnimationLibrary_ey0kc")

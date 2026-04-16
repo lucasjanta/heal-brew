@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b7eqx6awl855t"
+path="res://.godot/imported/treeminigame.aseprite-0b19ecc9cd737c587ee602777a2b34cc.res"
+
+[deps]
+
+source_file="res://assets/treeminigame.aseprite"
+dest_files=["res://.godot/imported/treeminigame.aseprite-0b19ecc9cd737c587ee602777a2b34cc.res"]
+
+[params]
+

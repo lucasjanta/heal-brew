@@ -1,0 +1,67 @@
+[gd_scene format=4 uid="uid://dg0gtc3j8emwe"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_imi7f"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAACAAAAAUklGRngAAABXRUJQVlA4TGwAAAAvP8EsEB+gpm0DFudLh5CATKmaTiCQwhx+/gOY/zHAKLbtNC/OYoLK6vD7iZSscVfmRvRfQFDkghWYKCGEwJLiCds0hkgti3WuOXZa5/JtY4ma5fn9//73//vf/+9vx++Nc2pZhBBi0yDBNAA=")
+size_override = Vector2(320, 180)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_nq2ft"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAADuAQAAUklGRuYBAABXRUJQVlA4TNoBAAAvP8EsEBcgFkzx7tgSC6Z4bw6JBVM8iK7mP6D6g+TW2uJK+ljgDGypiIYQWPi31Kx7JJoa7Axg8X9hvsI8l/T3PEX034HbSIrkOsYa2H0EZjSaScYKvHPVjhA/ACqWSEFisfRE6Q8ay6bWlJ8PYo1Ea1xstmSHaksArN0AauybBkVrnL0fsncc/fid15o1ebdmebRmsidZO8799/e8lmgs/rBm+/k9b9jb99EaZ49YI/aOyx8/39/z5KrG7mdYg++vpHe27NbGtnZp5xwXWhQd8Pu9Levr2LL33tIlJJJZR63ayHrjbrKQLNLI8HjnVFrkZuqaKcmuWbyZR7IOKpbYWFw9dcvYyZzI7FSObtKlxEb6Ri5oJPuOyux0MNhykmMrbmdBp5EBj2SJWuaoPr3yqbhVi1NyQiVzB8olanbtPB/aCdjpH7lhJxesIjOSsuAoiM3FRmYXs4NuUBbfNes7HpwSF9TTFa3IkV9ri0/ikRo9+rxK4rC6vnacEcV3dfokZn/uu0rbRDNQC2rAKCvd0JUMRc4YpQZoAB6Lq9NQ1OmkMd9xt05XeegxdJWTuPcew8h8sjNcU7mcrIKh9BDF931wMUmuEo+LmfHmxPma1cFc/vvvv/9+sQA=")
+size_override = Vector2(320, 180)
+
+[node name="fruitfall_minigame" type="Node2D" unique_id=443309564]
+
+[node name="tronco" type="Sprite2D" parent="." unique_id=635374045]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_imi7f")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/treeminigame.aseprite",
+"source_uid": 4641735365509918719
+}
+metadata/_aseprite_wizard_source_file_hash_ = "8fb258bd8b08bba718803054fb7ebca6"
+
+[node name="folhas" type="Sprite2D" parent="." unique_id=407554987]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_nq2ft")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/treeminigame.aseprite",
+"source_uid": 4641735365509918719
+}
+metadata/_aseprite_wizard_source_file_hash_ = "fe802202c7528d4e798c7a6823ead0a2"

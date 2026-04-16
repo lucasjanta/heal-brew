@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bn161vq62101c"]
+
+[node name="interactable_tree" type="Area2D" unique_id=1447361461]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593066080]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1703644271]
