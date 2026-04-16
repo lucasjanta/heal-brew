@@ -1,0 +1,65 @@
+[gd_scene format=4 uid="uid://bn161vq62101c"]
+
+[ext_resource type="Script" uid="uid://bfg3vaumtl2oa" path="res://scenes/trees&bushes/bush.gd" id="1_5j1ey"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pvpd"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_dh1wp"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACAAAABmAQAAUklGRl4BAABXRUJQVlA4TFEBAAAvP8AHEDegpm0jqN/U43DQjv96bMgELPbKoJpYignjV9pICnTqAxz0Xyhq/gNAdcdrT592e+kAhNp2wzYSA/+qLYAEgfQRFMIglD+L+MtOhyCi/w7ctnEkbW933Nlf2JyGW59uOuAX5RfHiHneDXcdQAAgLHHLASRlCmTcciRXU4w7DixKRrphXfoKGi/yxouYjXcjXME3iQNv1lV9gJqLpzrIEgdQWp4lj7Fa6kieEpIbR5HNyQryIK+gDi4d4+or75ol46QVSXFAmtee6tiWZAGv2cJR61XwYMxQ6bI6KFXxcoxvyjXyfLy9n67pWKVj2esODTNWXEGqxS0ljlP6Sx5UR6s7WCFl0bfj7qvvAjw31a6Dselgy+Ydqf8Qpo6SS6UOtDt4FrqDXDlGlsaHdwfZHArR7xZu3cFSR4NQxtrttsOQrID94LABuO0d/zMZAA==")
+size_override = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13pdq"]
+atlas = SubResource("PortableCompressedTexture2D_dh1wp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwwt0"]
+atlas = SubResource("PortableCompressedTexture2D_dh1wp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46mph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13pdq")
+}],
+"loop": true,
+"name": &"available",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwwt0")
+}],
+"loop": true,
+"name": &"unavailable",
+"speed": 10.0
+}]
+
+[node name="bush" type="Area2D" unique_id=1447361461]
+script = ExtResource("1_5j1ey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593066080]
+shape = SubResource("CircleShape2D_2pvpd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1703644271]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_46mph")
+animation = &"available"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/bush.aseprite",
+"source_uid": 3492609238424494748
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3bfdb4c62513b6daa1e47b2877373157"

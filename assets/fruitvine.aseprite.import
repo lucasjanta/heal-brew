@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://m54nukmpqht7"
+path="res://.godot/imported/fruitvine.aseprite-fad6f643d3e5362a4b72e92f8fef6beb.res"
+
+[deps]
+
+source_file="res://assets/fruitvine.aseprite"
+dest_files=["res://.godot/imported/fruitvine.aseprite-fad6f643d3e5362a4b72e92f8fef6beb.res"]
+
+[params]
+
