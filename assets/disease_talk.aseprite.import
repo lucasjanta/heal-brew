@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ccunyotolquj3"
+path="res://.godot/imported/disease_talk.aseprite-b0b54650d43b4837024d14cb60b8e142.res"
+
+[deps]
+
+source_file="res://assets/disease_talk.aseprite"
+dest_files=["res://.godot/imported/disease_talk.aseprite-b0b54650d43b4837024d14cb60b8e142.res"]
+
+[params]
+

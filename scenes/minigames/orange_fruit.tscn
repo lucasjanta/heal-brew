@@ -1,0 +1,39 @@
+[gd_scene format=4 uid="uid://h0gsxojqpun2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bk3ks"]
+radius = 8.062258
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_bk3ks"]
+_data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABuAAAAUklGRmYAAABXRUJQVlA4TFkAAAAvD8ADEB8gJCBk+53zTEhAqP5v000RCBAibPh/UjH/AVBXfmAQ2baS89EWZHklfhlSkMM1yMtBBHeJENH/wFpk24xWY6jZEGqahkmaBpekqaGI+dFHoCGIAQA=")
+size_override = Vector2(16, 16)
+
+[node name="orange_fruit" type="Area2D" unique_id=2123823807]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1223465823]
+shape = SubResource("CircleShape2D_bk3ks")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2147380488]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_bk3ks")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/fruitvine.aseprite",
+"source_uid": 905982530870127794
+}
+metadata/_aseprite_wizard_source_file_hash_ = "4b55086fc2aa8a649748d84ae42c5b13"
