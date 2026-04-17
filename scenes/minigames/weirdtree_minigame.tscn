@@ -80,6 +80,84 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_2cld1"]
+_data = PackedByteArray("AAADAAUAAAABAAAAMAAAADAAAABMAQAAUklGRkQBAABXRUJQVlA4TDcBAAAvL8ALEDdAFmAyunmk3p9BIGTSNvVvqVbGDEzAXiIBEv5xw+cmPxjmPwDAbZpK454X4Li2Hbf5Hms9wkwtEvAWWGf4WYCGnzqAJO9/DeLnJzPWEf1n5LZtJM1yZVH/gnD4fHSgHXhcNUCUgXhMSx9tgCgDIZ/P7UBmnHWOISveBtKigMDs2gAwow2Q91maAEAEaAGoG/yBmgAaPP0zANAClDvXgXLnFiBkxX0HMOSfz8DjqgGiCuDSEhQAVIA786iAx4cCRpH7HsCs9g5pcRlwIkHt/nJTO/fMRwUM/li5b2ZSPZ5qvdx0aTEqgUIyqktlVemndn9c1d6B2YGMJx7Tovdm7qNViMwx73p4Pnfeajgwdz5HVOv53BgA+AKwk/3xBWAGiAAGYD3d4A8GoJ+Ge//z1Xe3IgA=")
+size_override = Vector2(48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i851r"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n61ga"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2tcr"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0psf"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjyd2"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksk6w"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vgd1"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdged"]
+atlas = SubResource("PortableCompressedTexture2D_2cld1")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1fiki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i851r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n61ga")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2tcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0psf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjyd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksk6w")
+}],
+"loop": false,
+"name": &"pull",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vgd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdged")
+}],
+"loop": false,
+"name": &"throw",
+"speed": 16.0
+}]
+
 [node name="weirdtree_minigame" type="Node2D" unique_id=485865318]
 script = ExtResource("1_l6s8n")
 
@@ -188,3 +266,35 @@ position = Vector2(285, 47)
 
 [node name="Marker2D16" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=622221635]
 position = Vector2(303, 66)
+
+[node name="slingshot" type="Node2D" parent="." unique_id=2096352250]
+position = Vector2(13, 165)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="slingshot" unique_id=1054074973]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_1fiki")
+animation = &"throw"
+autoplay = "normal"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/slingshot.aseprite",
+"source_uid": 7042784387096407013
+}
+metadata/_aseprite_wizard_source_file_hash_ = "b15014b7e7382b0167fce36de4fd0b0d"
+
+[node name="rock_pos" type="Marker2D" parent="slingshot" unique_id=1749907633]
+position = Vector2(0, -12)
+
+[connection signal="animation_finished" from="slingshot/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

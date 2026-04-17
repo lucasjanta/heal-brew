@@ -1,0 +1,43 @@
+[gd_scene format=4 uid="uid://bakmiu7ucturt"]
+
+[ext_resource type="Script" uid="uid://6kdjgf1s5ywh" path="res://scripts/minigames/weirdtree_minigame/rock.gd" id="1_t8mhy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hyhrw"]
+radius = 4.0
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hyhrw"]
+_data = PackedByteArray("AAADAAUAAAABAAAABAAAAAMAAAA+AAAAUklGRjYAAABXRUJQVlA4TCkAAAAvA4AAEBcgEEhxokssFkzxLNNIIJAkOcv68x9w70AgkIYoMlviiP5HAwA=")
+size_override = Vector2(4, 3)
+
+[node name="rock" type="Area2D" unique_id=1075794714]
+script = ExtResource("1_t8mhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1497834672]
+shape = SubResource("CircleShape2D_hyhrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1745217330]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = SubResource("PortableCompressedTexture2D_hyhrw")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/rock.aseprite",
+"source_uid": 4704115202383084229
+}
+metadata/_aseprite_wizard_source_file_hash_ = "a28fcd20a4543fcdbbe0465c7ea407be"
