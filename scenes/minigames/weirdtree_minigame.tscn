@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://3a05swenxdpo"]
 
 [ext_resource type="Script" uid="uid://bnnsvxj1x7g7p" path="res://scripts/minigames/weirdtree_minigame/weirdtree_minigame.gd" id="1_l6s8n"]
+[ext_resource type="Script" uid="uid://b5stoswgf2ex3" path="res://scripts/minigames/weirdtree_minigame/owl.gd" id="2_2cld1"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_vsrba"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAYAwAAUklGRhADAABXRUJQVlA4TAMDAAAvP8EsAF+gJpIk5ULycDE8h+/fBrtSGgAEo8rilnT//+AJN0iC2tg2JVskJdSASD16V8hfZ+Y/ACCjEzaoau6XU6xrgwr20Ar26c8CuhEgSZKbhQesQfyQJssCVDrAp0Y5jRE9EVDfcQEW8POAFKlCg3zmTU3fbk1vc474Ivo/Act3/38x8rHc+fXRssgIEDAFCAyydOdjqZPX/bHIuFoTgywd+lhq5HWPLIJKWY6Gx5KzKufrlkibpCGPxRQACGKTCE0BECDuToTE2hRrU4SmACGv00jCsU2DJMwDAERIwBQhUW16FwCmWBMhERPbiWAKU5gCgCliIibCFgFEaIqYCE0BgEg1SMYayTjmqiVCU4SmiCWTkSlkBZgiNkVoijUBpBpkSVi3JJQxU8rXmQCkeCwpMy3tWTI1M90VFpJ67KDyfz1GUq/PY8lZlfN1SyRTmEQa8liwaYptYtMU5yVCwhSbREys5XUaSTi2aZCEebAmKolN4sLEtiliIiSARDDFJhGbIjYF2CqYwhQxERKxKYBUg2SskYxjrrUpiJDYJCqlPQIQsSlCIibWpqkGWRLWLQllzJTydXseS8pMS3uWTM1Md4U7iKQeO6i8zyLJYyf+XIGkAjDyqEHlZzUfGlr3oUvvy4zksRPeV5HksYPKz7yMPHgAHDXUoweV9wq3Da277dJ7sHFr6JQXNZ86RbakU25rbntljIZuebH16dAh+fDYATB83mXUgwfAf6yPLX3+kgz+/dipHTQi/LyL5MGz/ozq5uYcRj5shHvdzU785gqc4h9/PO3xR/dT9Q8rAMODU/WPp73+eArnsPg073HyMlc/2vp1rvapzA10913c+UzeQd6Es//2ZwMmL/NFy97+ebW/i/vkZU/zn3P7fGfJ9zF1zzz53DkNLRleknq1pqmUznHPMCK8AlPnlGkqDSsJfnt1OT9LzoDkwwv4lOHvv7bKNJ3H3fdQfC4p3Mvlfvtzy93PNu/Q3SMAwwUm9znzVSpzsnKenbqX+ZFsXuDaNwoA")
@@ -190,6 +191,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "3d14914dead8af713a48d3024e57bccf"
 
 [node name="owl" type="Node2D" parent="." unique_id=1567791662]
 position = Vector2(160, 19)
+script = ExtResource("2_2cld1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="owl" unique_id=880693566]
 texture_filter = 1
@@ -297,4 +299,5 @@ metadata/_aseprite_wizard_source_file_hash_ = "b15014b7e7382b0167fce36de4fd0b0d"
 [node name="rock_pos" type="Marker2D" parent="slingshot" unique_id=1749907633]
 position = Vector2(0, -12)
 
+[connection signal="animation_finished" from="owl/AnimatedSprite2D" to="owl" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="animation_finished" from="slingshot/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

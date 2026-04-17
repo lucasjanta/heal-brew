@@ -41,3 +41,4 @@ func spawn_fruit(side : String, pos : Vector2):
 	var new_fruit = BLUE_FRUIT.instantiate()
 	add_child(new_fruit)
 	new_fruit.global_position = pos
+	new_fruit.add_to_group(side)
