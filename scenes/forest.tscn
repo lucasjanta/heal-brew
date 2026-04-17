@@ -29,34 +29,34 @@ script = ExtResource("1_bgcxa")
 position = Vector2(40, 156)
 
 [node name="Marker2D2" type="Marker2D" parent="PlantsSpawn" unique_id=1439519878]
-position = Vector2(40, 90)
+position = Vector2(73, 102)
 
 [node name="Marker2D3" type="Marker2D" parent="PlantsSpawn" unique_id=889916201]
-position = Vector2(40, 24)
+position = Vector2(42, 49)
 
 [node name="Marker2D4" type="Marker2D" parent="PlantsSpawn" unique_id=714466165]
-position = Vector2(100, 24)
+position = Vector2(111, 31)
 
 [node name="Marker2D5" type="Marker2D" parent="PlantsSpawn" unique_id=482561277]
-position = Vector2(160, 24)
+position = Vector2(155, 82)
 
 [node name="Marker2D6" type="Marker2D" parent="PlantsSpawn" unique_id=1766464106]
-position = Vector2(220, 24)
+position = Vector2(195, 27)
 
 [node name="Marker2D7" type="Marker2D" parent="PlantsSpawn" unique_id=2056098146]
-position = Vector2(280, 24)
+position = Vector2(255, 59)
 
 [node name="Marker2D8" type="Marker2D" parent="PlantsSpawn" unique_id=481115779]
-position = Vector2(280, 90)
+position = Vector2(306, 107)
 
 [node name="Marker2D9" type="Marker2D" parent="PlantsSpawn" unique_id=979275377]
-position = Vector2(280, 156)
+position = Vector2(233, 141)
 
 [node name="movable_witch" parent="." unique_id=825951129 instance=ExtResource("2_0afsd")]
 position = Vector2(162, 157)
 
 [node name="Camera2D" type="Camera2D" parent="movable_witch" unique_id=1460120054]
-limit_left = 0
+limit_left = -15
 limit_top = -18
-limit_right = 320
+limit_right = 336
 limit_bottom = 192

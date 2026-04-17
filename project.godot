@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Heal Brew"
-run/main_scene="uid://cs40c28mw7nn1"
+run/main_scene="uid://dgdowoohchep2"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

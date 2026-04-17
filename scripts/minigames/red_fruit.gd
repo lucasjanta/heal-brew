@@ -22,7 +22,7 @@ func fall():
 	
 func _process(delta: float) -> void:
 	if falling:
-		position.y += 40 * delta
+		position.y += 75 * delta
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "groundArea":

@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var fruit_spawn_places: Node2D = $FruitSpawnPlaces
 @onready var witch: CharacterBody2D = $fruitgame_witch
 @onready var kick_label: Label = $KickLabel
@@ -27,6 +27,7 @@ func get_fruits():
 func shake_tree():
 	witch.kick()
 	get_fruits()
+	animation_player.play("shake")
 	for fruit in fruits_in_tree:
 		fruit.shake()
 

@@ -1,4 +1,63 @@
-[gd_scene format=3 uid="uid://c4b6muvkkljyh"]
+[gd_scene format=4 uid="uid://c4b6muvkkljyh"]
+
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="1_qwnig"]
+[ext_resource type="Script" uid="uid://w7glifog5xou" path="res://scripts/UI/main_menu.gd" id="1_yonvy"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_qwnig"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAADKAAAAUklGRsIAAABXRUJQVlA4TLUAAAAvH8AHEDegpm0jONdvasdDcGoaSYGT174lBuiRg0JIVqgH8RUIJuxQMpn/AKDkm9Gt9O3W/4GrBnDrxmbgS739xwwmI7BkAnsUwPjDaHTZGET0fwJkDcjmDHAWMXaGcjNi/MUiIvR3wLwMYGFB6kVAytru3l1fFaK7e8Nrp3sD5WBEpVxMSEM5lHme5eeNsPNyKgVwwOMAmJGZOSlkgvPM4gCAikfmERywMweHJSFSai401LACAA==")
+size_override = Vector2(32, 32)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_yonvy"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABmAgAAUklGRl4CAABXRUJQVlA4TFICAAAvP8EsEC9AmG207+YPcJiHorZtG8YldcrTOZxs0iZr6Nqve3TnPwDarsPU7/YD2q1txRElnIG3DQFUZWARAdJNgI+TfzDgAUuXN3dH9H8Cwv/+/9////v/v5WuXJyRlduTsdJ+zzfamQD43t2AZRqA75MbLJMA36c3lilY+Tz2hSng8x3IMgEr35EbE8BnyJdlAr5jtxlgyMYErHxGQJgBPs8xCzy2zUEgA49scOzLHGSAWxtw5ClYyTnvtBc22pzzzizkvHM7t3NwdHLO+5V8PgNceJblp8dKHrvjHsegzPLTI4/ef/WsL+BnxzEs/9m0whtg+YlR0xuUfmLAO8AtgDckwKm1YdhOu3glvUNyq76jICWvUHpHFX4BxygKuBWAEhm0YxEIPgOYcYyhmAG4tL5r8UkJs8iQHTOjyrljBM4BZgbHc1Aa8KuYWYTHdjAzi14Bxdo4wroRcGilQgd4aIfSgcTikUQxswhwPEHbRCSX6jWOe9xIHiGlhtMbO/3SVAmXENe4tHMN4VEAOrFnkcsWe9YBgseAtScWr9hJaQwIHq+kXmyK3e5Yr7L4JEpjEbD7EbBuRE7Vs+ERJZ94Ey4FgPKGCBDcIkIZEaHg1wqpE6E8EaF0KixOVQlqoi33Im1NICWvkFJVgpoAypUIUBNUpSrhFqKpUgKI0EABqFJqEF4FWiXUVHFZqRFVtMHrBnoSqCeQev3geYNELyFRe0i0wX+6SiA1ElTRDXPYaZWaKs7DRK5AFQ1KwBLmE6BKCSBM6XplmZMQAt0ws034yyo=")
+size_override = Vector2(320, 180)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwnig"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.34509805)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yonvy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.87058824)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jstl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.88235295)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.85490197)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwnig"]
 
 [node name="main_menu" type="Control" unique_id=1024374217]
 layout_mode = 3
@@ -7,3 +66,152 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yonvy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=518892966]
+texture_filter = 1
+custom_minimum_size = Vector2(120, 140)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -140.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = SubResource("PortableCompressedTexture2D_qwnig")
+expand_mode = 1
+stretch_mode = 5
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/witch1.aseprite",
+"source_uid": 4433336176128941609
+}
+metadata/_aseprite_wizard_source_file_hash_ = "47debb371efe6d8f9c1edaeff4d685e0"
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1909949636]
+texture_filter = 1
+custom_minimum_size = Vector2(360, 180)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -436.0
+offset_top = -90.0
+offset_right = -76.0
+offset_bottom = 90.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("PortableCompressedTexture2D_yonvy")
+expand_mode = 1
+stretch_mode = 5
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {},
+"slice_section": true
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": ["cauldron"],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/lab.aseprite",
+"source_uid": 2618565923142946936
+}
+metadata/_aseprite_wizard_source_file_hash_ = "49522f123bfc2fa2d9175c57f41cf7d1"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1429764457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qwnig")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1544781228]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=756976328]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1562645571]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_qwnig")
+theme_override_font_sizes/font_size = 22
+text = "Heal Brew"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1302735886]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1002302290]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qwnig")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yonvy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5jstl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwnig")
+text = "START"
+
+[node name="OptionsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1300048702]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qwnig")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yonvy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5jstl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwnig")
+text = "options"
+
+[node name="QuitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=147021448]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qwnig")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_yonvy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5jstl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwnig")
+text = "quit"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

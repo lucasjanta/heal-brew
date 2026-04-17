@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://dtoa7ayxqg3bq" path="res://scripts/minigames/fruitfall_minigame.gd" id="1_nq2ft"]
 [ext_resource type="Script" uid="uid://co7eww8gogxku" path="res://scripts/minigames/fruitgame_witch.gd" id="2_6efnl"]
 [ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_uv08p"]
+[ext_resource type="Script" uid="uid://cu30sgg65xokm" path="res://scripts/minigames/falling_fruits/quit_area.gd" id="4_dh2s2"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_uv08p"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAGAQAAUklGRv4AAABXRUJQVlA4TPEAAAAvP8EsAEegpI0kaOGul/Nv4fCx38dJURDJBvU+iqggsxYiqKCAFmoiSWGeYATtiMo9CujnPwC8HhlBa+IOa/m8f2epAKm27bqNKIRC0iIohSL4F0HH8ug8Aln3Aff3PVmZRRH9n4D/4f/h/+H/Z2Dfh//zvw0vX546nqamwbopCdMJlPlaS8YKJWAtWWuZ9VlhntGQB8TkDQRSxKSDaMLuf98NMOSHKtv1nu9wDGXyb28fyU7QuscNf5TVOWZS50BPWOfITA1TgL/7cezSSizC68eSzPYBMghXCNBxf99LwG6eEAhh4JFPSR5M+yQF+YMOAA==")
+size_override = Vector2(320, 180)
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_imi7f"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAACAAAAAUklGRngAAABXRUJQVlA4TGwAAAAvP8EsEB+gpm0DFudLh5CATKmaTiCQwhx+/gOY/zHAKLbtNC/OYoLK6vD7iZSscVfmRvRfQFDkghWYKCGEwJLiCds0hkgti3WuOXZa5/JtY4ma5fn9//73//vf/+9vx++Nc2pZhBBi0yDBNAA=")
@@ -71,8 +76,77 @@ size = Vector2(20, 80)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uv08p"]
 size = Vector2(320, 20)
 
+[sub_resource type="Animation" id="Animation_uv08p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tronco:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dh2s2"]
+resource_name = "shake"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tronco:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1, 0), Vector2(0, 0), Vector2(1, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bufjo"]
+_data = {
+&"RESET": SubResource("Animation_uv08p"),
+&"shake": SubResource("Animation_dh2s2")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dh2s2"]
+size = Vector2(20, 48)
+
 [node name="fruitfall_minigame" type="Node2D" unique_id=443309564]
 script = ExtResource("1_nq2ft")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1282898970]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_uv08p")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/treeminigame.aseprite",
+"source_uid": 4641735365509918719
+}
+metadata/_aseprite_wizard_source_file_hash_ = "25778ab1da349126baca2f79d15b7e8b"
 
 [node name="tronco" type="Sprite2D" parent="." unique_id=635374045]
 texture_filter = 1
@@ -163,7 +237,7 @@ position = Vector2(278, 46)
 position = Vector2(102, 39)
 
 [node name="fruitgame_witch" type="CharacterBody2D" parent="." unique_id=1550598302]
-position = Vector2(0, 149)
+position = Vector2(122, 149)
 scale = Vector2(1.5, 1.5)
 script = ExtResource("2_6efnl")
 
@@ -217,6 +291,21 @@ theme_override_fonts/font = ExtResource("3_uv08p")
 theme_override_font_sizes/font_size = 8
 text = "Kick [E]"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=439569169]
+libraries/ = SubResource("AnimationLibrary_bufjo")
+
+[node name="QuitArea" type="Area2D" parent="." unique_id=462744077]
+position = Vector2(-31, 143)
+script = ExtResource("4_dh2s2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuitArea" unique_id=1169395067]
+shape = SubResource("RectangleShape2D_dh2s2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="QuitArea" unique_id=45724769]
+position = Vector2(386, 0)
+shape = SubResource("RectangleShape2D_dh2s2")
+
 [connection signal="animation_finished" from="fruitgame_witch/AnimatedSprite2D" to="fruitgame_witch" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="ShakeArea" to="." method="_on_shake_area_body_entered"]
 [connection signal="body_exited" from="ShakeArea" to="." method="_on_shake_area_body_exited"]
+[connection signal="body_entered" from="QuitArea" to="QuitArea" method="_on_body_entered"]
