@@ -1,0 +1,190 @@
+[gd_scene format=4 uid="uid://3a05swenxdpo"]
+
+[ext_resource type="Script" uid="uid://bnnsvxj1x7g7p" path="res://scripts/minigames/weirdtree_minigame/weirdtree_minigame.gd" id="1_l6s8n"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_vsrba"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAYAwAAUklGRhADAABXRUJQVlA4TAMDAAAvP8EsAF+gJpIk5ULycDE8h+/fBrtSGgAEo8rilnT//+AJN0iC2tg2JVskJdSASD16V8hfZ+Y/ACCjEzaoau6XU6xrgwr20Ar26c8CuhEgSZKbhQesQfyQJssCVDrAp0Y5jRE9EVDfcQEW8POAFKlCg3zmTU3fbk1vc474Ivo/Act3/38x8rHc+fXRssgIEDAFCAyydOdjqZPX/bHIuFoTgywd+lhq5HWPLIJKWY6Gx5KzKufrlkibpCGPxRQACGKTCE0BECDuToTE2hRrU4SmACGv00jCsU2DJMwDAERIwBQhUW16FwCmWBMhERPbiWAKU5gCgCliIibCFgFEaIqYCE0BgEg1SMYayTjmqiVCU4SmiCWTkSlkBZgiNkVoijUBpBpkSVi3JJQxU8rXmQCkeCwpMy3tWTI1M90VFpJ67KDyfz1GUq/PY8lZlfN1SyRTmEQa8liwaYptYtMU5yVCwhSbREys5XUaSTi2aZCEebAmKolN4sLEtiliIiSARDDFJhGbIjYF2CqYwhQxERKxKYBUg2SskYxjrrUpiJDYJCqlPQIQsSlCIibWpqkGWRLWLQllzJTydXseS8pMS3uWTM1Md4U7iKQeO6i8zyLJYyf+XIGkAjDyqEHlZzUfGlr3oUvvy4zksRPeV5HksYPKz7yMPHgAHDXUoweV9wq3Da277dJ7sHFr6JQXNZ86RbakU25rbntljIZuebH16dAh+fDYATB83mXUgwfAf6yPLX3+kgz+/dipHTQi/LyL5MGz/ozq5uYcRj5shHvdzU785gqc4h9/PO3xR/dT9Q8rAMODU/WPp73+eArnsPg073HyMlc/2vp1rvapzA10913c+UzeQd6Es//2ZwMmL/NFy97+ebW/i/vkZU/zn3P7fGfJ9zF1zzz53DkNLRleknq1pqmUznHPMCK8AlPnlGkqDSsJfnt1OT9LzoDkwwv4lOHvv7bKNJ3H3fdQfC4p3Mvlfvtzy93PNu/Q3SMAwwUm9znzVSpzsnKenbqX+ZFsXuDaNwoA")
+size_override = Vector2(320, 180)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_l6s8n"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAEAAAACyAgAAUklGRqoCAABXRUJQVlA4TJ4CAAAvX8APEEegJgAShpsI4Exj/xZGUtNICnTlXX08Iggu8K8FCWoBAGEy2Oe+UshfKIX5DwBQdi/lop93XGm3PfQHcmTbjtsI2AGeYIFMVb0CNKuo2MMGJokxPMDxRP+YmdZNfHywv3sBEf135LaRI6l2D5M54RWmDNiYehxjWLMd4l7ecj6Pti6ec85v3pgmRGiciOYXofQ103QMxjQhQgEfHZIUQMBaCyJ299HdiS09Lf1aCyJ2+eguYtc9Xbe6ouXqNxdGIiJ5FyIqu7QgUl8z0XSUTjStzd6YJkTonohoL4R5bYIx2yGYgFliuI897jtr/gHifojeRReIKBhxEhFBduQcjKIDKAFqDpersVqOVBeUHC4LY3UcSSroOGLOoZRy9lqO4M+n01tMao4U/GmdmIKaw/OimiPWeT3HrnRQcxywuy/tV4COw6V0Lr2FYHUcJmVeDkbLAZQALYeL1gGAdd7qOOLgjakAKg7nfV2MVsXR9z1vWRYNBxuwMesoOdzLW87n0So6xoloftF0BHx0SKqOy0d3kbv76O7+A8dvLoxERC+ajq+ZaDrKDqByOEByAZZ1X9x7qXsCaM/7O9ja4YY/3IYJmPl31Ha4OITakQbPcz9E75a1wYEhW+5weUAFSzkHU6bh4AsxB+5I2fMFoAS2KDt4IQfuSDmxXK6m3PkGR8zieHbTPHbrGxxuJ3ew7DbEG2k5ykKSCmVBdhizwRFfpEbPH0wopfJYNjiMk7Os4M+n01tMa01HfZ/FUd93TMGf1ikX2OZw7M9+lud5MfhtDoM6GFas877p4KW6ULcrHdYajs0dsLsv7VdA27EtlxJ3hGDbjna/5QBKgJbDResAwDpvdRxx8MZUABWH874uRqvi6PuetyyLgsMA")
+size_override = Vector2(96, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cld1"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxidl"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j22ea"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lofgf"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsbuo"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t336"]
+atlas = SubResource("PortableCompressedTexture2D_l6s8n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i851r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cld1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxidl")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j22ea")
+}],
+"loop": true,
+"name": &"down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lofgf")
+}],
+"loop": true,
+"name": &"left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsbuo")
+}],
+"loop": true,
+"name": &"right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t336")
+}],
+"loop": true,
+"name": &"up",
+"speed": 10.0
+}]
+
+[node name="weirdtree_minigame" type="Node2D" unique_id=485865318]
+script = ExtResource("1_l6s8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=905178175]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_vsrba")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/minigame_weirdtree.aseprite",
+"source_uid": 7009811313102496511
+}
+metadata/_aseprite_wizard_source_file_hash_ = "3d14914dead8af713a48d3024e57bccf"
+
+[node name="owl" type="Node2D" parent="." unique_id=1567791662]
+position = Vector2(160, 19)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="owl" unique_id=880693566]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_i851r")
+animation = &"up"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/owl.aseprite",
+"source_uid": 831237435947202370
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d59479e2f8a1a2180601e578a740bd67"
+
+[node name="fruitSpawnPoints" type="Node2D" parent="." unique_id=834515239]
+
+[node name="leftFruits" type="Node2D" parent="fruitSpawnPoints" unique_id=1416434535]
+
+[node name="Marker2D" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=47499510]
+position = Vector2(14, 67)
+
+[node name="Marker2D2" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=1103883056]
+position = Vector2(45, 68)
+
+[node name="Marker2D3" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=2051820885]
+position = Vector2(86, 63)
+
+[node name="Marker2D4" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=279524560]
+position = Vector2(118, 64)
+
+[node name="Marker2D5" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=1366989693]
+position = Vector2(31, 47)
+
+[node name="Marker2D6" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=177389381]
+position = Vector2(68, 48)
+
+[node name="Marker2D7" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=563657747]
+position = Vector2(103, 44)
+
+[node name="Marker2D8" type="Marker2D" parent="fruitSpawnPoints/leftFruits" unique_id=2147146986]
+position = Vector2(135, 44)
+
+[node name="rightFruits" type="Node2D" parent="fruitSpawnPoints" unique_id=141306828]
+
+[node name="Marker2D9" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=1836039367]
+position = Vector2(183, 44)
+
+[node name="Marker2D10" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=1837002213]
+position = Vector2(201, 63)
+
+[node name="Marker2D11" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=166948686]
+position = Vector2(219, 44)
+
+[node name="Marker2D12" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=1874644475]
+position = Vector2(234, 64)
+
+[node name="Marker2D13" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=539110419]
+position = Vector2(255, 47)
+
+[node name="Marker2D14" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=553993091]
+position = Vector2(270, 66)
+
+[node name="Marker2D15" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=1065366083]
+position = Vector2(285, 47)
+
+[node name="Marker2D16" type="Marker2D" parent="fruitSpawnPoints/rightFruits" unique_id=622221635]
+position = Vector2(303, 66)

@@ -1,9 +1,9 @@
 extends Node2D
-const BUSH = preload("uid://bn161vq62101c")
+const WEIRD_TREE = preload("uid://bn161vq62101c")
 const TREE = preload("uid://bk66b5ygqhetv")
 const VINE = preload("uid://jktahw8lt26")
 
-var options : Array = [BUSH, TREE, VINE]
+var options : Array = [WEIRD_TREE, TREE, VINE]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

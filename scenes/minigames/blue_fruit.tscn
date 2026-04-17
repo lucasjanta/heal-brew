@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://btmru1jkvdkrm"]
+
+[ext_resource type="Script" uid="uid://d0oounevx534g" path="res://scripts/minigames/weirdtree_minigame/blue_fruit.gd" id="1_i3eva"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_63fud"]
+size = Vector2(8, 16)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_63fud"]
+_data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABUAAAAUklGRkwAAABXRUJQVlA4TEAAAAAvD8ADEBcgFkx252+YlFgw2Zu/YSQCgSSI/a32mf+A6g8KIslpLgFMRA0SogNd3WhVENH/IAsfPEE1WGVXDTwB")
+size_override = Vector2(16, 16)
+
+[node name="blue_fruit" type="Area2D" unique_id=2105418599]
+script = ExtResource("1_i3eva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890799167]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_63fud")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=988678718]
+texture_filter = 1
+position = Vector2(0, 8)
+texture = SubResource("PortableCompressedTexture2D_63fud")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/blue_fruit.aseprite",
+"source_uid": 4484899832209036303
+}
+metadata/_aseprite_wizard_source_file_hash_ = "30f2ec67fe1018c943c2ddb4f11dcaff"

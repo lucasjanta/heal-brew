@@ -1,0 +1,88 @@
+[gd_scene format=4 uid="uid://bn161vq62101c"]
+
+[ext_resource type="Script" uid="uid://bfg3vaumtl2oa" path="res://scenes/trees&bushes/weird_tree.gd" id="1_vnxq0"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_ne1kq"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_220oq"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACAAAAAEAQAAUklGRvwAAABXRUJQVlA4TPAAAAAvP8AHEC+gpm0DNpazg1vBVFHbNnCw33MEpsEakQAJmaoHnOvr+Q+AsLuh0+f2A9ix7cZtgA5wtRTAhwqMDlKC+++GlDSks/1G9F+R27aNu3tim1/YhxrAmiOyfM1hbbN5RwC0DcCnHLQspVTK2phwRAngtQMofcIB5uOdbmEwHE/XcNWALlobxGfHRbEdJW1HvttwgrIkKUtg8W7b3dlqO0L56JDHsHpUul0McfnNi8MuDnPrkfwCuNdCuhFG4hyJYy5fHGPK8gtwou5h/uCcmu6OylWHtOrIWnVI3+ywttuqY1t1vCYcH5j+mWuYdRg=")
+size_override = Vector2(64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17hyb"]
+atlas = SubResource("PortableCompressedTexture2D_220oq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoo3s"]
+atlas = SubResource("PortableCompressedTexture2D_220oq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5erod"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17hyb")
+}],
+"loop": true,
+"name": &"available",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoo3s")
+}],
+"loop": true,
+"name": &"unavailable",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2pvpd"]
+radius = 20.0
+
+[node name="weird_tree" type="Area2D" unique_id=1447361461]
+script = ExtResource("1_vnxq0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1703644271]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_5erod")
+animation = &"available"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/weird_tree.aseprite",
+"source_uid": 8381021773252433018
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f5a2dd4b77509e704c8f436e3c5827e3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593066080]
+shape = SubResource("CircleShape2D_2pvpd")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1459905110]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -30.0
+offset_right = 28.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_ne1kq")
+theme_override_font_sizes/font_size = 6
+text = "Interact [E]"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

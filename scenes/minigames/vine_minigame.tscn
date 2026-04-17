@@ -6,6 +6,101 @@
 _data = PackedByteArray("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")
 size_override = Vector2(320, 180)
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_h2bkr"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAABAAAACUAAAAUklGRowAAABXRUJQVlA4TIAAAAAvH8ADEB9AJEAao6FW1bRtwOK85TOFBGRKc0A1/wGY+k8LbiLJVq15nDK/7+VI+Aw5//gK+Qw5u3meSENE/4UECU2nANC3cMFE9eiDVas0cWriVFqNnqJB9RroWzCO4BI3PqsFLDNksdJYLTjkL1v2f+2QLW1ZPzu0ox+NLZlMNA==")
+size_override = Vector2(32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltwrx"]
+atlas = SubResource("PortableCompressedTexture2D_h2bkr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgdr2"]
+atlas = SubResource("PortableCompressedTexture2D_h2bkr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ljcpp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltwrx")
+}],
+"loop": true,
+"name": &"close",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgdr2")
+}],
+"loop": true,
+"name": &"open",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2bkr"]
+radius = 9.0
+
+[sub_resource type="Animation" id="Animation_h2bkr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cutArea/cutCollision:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ltwrx"]
+resource_name = "cut"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"close", &"open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cutArea/cutCollision:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dgdr2"]
+_data = {
+&"RESET": SubResource("Animation_h2bkr"),
+&"cut": SubResource("Animation_ltwrx")
+}
+
 [node name="vine_minigame" type="Node2D" unique_id=1949345397]
 script = ExtResource("1_h2bkr")
 
@@ -64,3 +159,38 @@ position = Vector2(256, 81)
 
 [node name="Marker2D9" type="Marker2D" parent="FruitSpawnPoints" unique_id=1490852408]
 position = Vector2(276, 149)
+
+[node name="scissors" type="Node2D" parent="." unique_id=1255332539]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="scissors" unique_id=405895912]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ljcpp")
+animation = &"open"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/scissor.aseprite",
+"source_uid": 1221520523365180958
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5f4c0c7b0ad8c9c41915e29763fc7e18"
+
+[node name="cutArea" type="Area2D" parent="scissors" unique_id=218260224]
+
+[node name="cutCollision" type="CollisionShape2D" parent="scissors/cutArea" unique_id=878955259]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_h2bkr")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scissors" unique_id=586778464]
+libraries/ = SubResource("AnimationLibrary_dgdr2")
