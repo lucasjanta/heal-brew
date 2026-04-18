@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnnsvxj1x7g7p" path="res://scripts/minigames/weirdtree_minigame/weirdtree_minigame.gd" id="1_l6s8n"]
 [ext_resource type="Script" uid="uid://b5stoswgf2ex3" path="res://scripts/minigames/weirdtree_minigame/owl.gd" id="2_2cld1"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_lxidl"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_vsrba"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAYAwAAUklGRhADAABXRUJQVlA4TAMDAAAvP8EsAF+gJpIk5ULycDE8h+/fBrtSGgAEo8rilnT//+AJN0iC2tg2JVskJdSASD16V8hfZ+Y/ACCjEzaoau6XU6xrgwr20Ar26c8CuhEgSZKbhQesQfyQJssCVDrAp0Y5jRE9EVDfcQEW8POAFKlCg3zmTU3fbk1vc474Ivo/Act3/38x8rHc+fXRssgIEDAFCAyydOdjqZPX/bHIuFoTgywd+lhq5HWPLIJKWY6Gx5KzKufrlkibpCGPxRQACGKTCE0BECDuToTE2hRrU4SmACGv00jCsU2DJMwDAERIwBQhUW16FwCmWBMhERPbiWAKU5gCgCliIibCFgFEaIqYCE0BgEg1SMYayTjmqiVCU4SmiCWTkSlkBZgiNkVoijUBpBpkSVi3JJQxU8rXmQCkeCwpMy3tWTI1M90VFpJ67KDyfz1GUq/PY8lZlfN1SyRTmEQa8liwaYptYtMU5yVCwhSbREys5XUaSTi2aZCEebAmKolN4sLEtiliIiSARDDFJhGbIjYF2CqYwhQxERKxKYBUg2SskYxjrrUpiJDYJCqlPQIQsSlCIibWpqkGWRLWLQllzJTydXseS8pMS3uWTM1Md4U7iKQeO6i8zyLJYyf+XIGkAjDyqEHlZzUfGlr3oUvvy4zksRPeV5HksYPKz7yMPHgAHDXUoweV9wq3Da277dJ7sHFr6JQXNZ86RbakU25rbntljIZuebH16dAh+fDYATB83mXUgwfAf6yPLX3+kgz+/dipHTQi/LyL5MGz/ozq5uYcRj5shHvdzU785gqc4h9/PO3xR/dT9Q8rAMODU/WPp73+eArnsPg073HyMlc/2vp1rvapzA10913c+UzeQd6Es//2ZwMmL/NFy97+ebW/i/vkZU/zn3P7fGfJ9zF1zzz53DkNLRleknq1pqmUznHPMCK8AlPnlGkqDSsJfnt1OT9LzoDkwwv4lOHvv7bKNJ3H3fdQfC4p3Mvlfvtzy93PNu/Q3SMAwwUm9znzVSpzsnKenbqX+ZFsXuDaNwoA")
@@ -81,6 +82,68 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_2cld1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(160, 19)]
+}
+
+[sub_resource type="Animation" id="Animation_lxidl"]
+resource_name = "attack"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(7, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(160, 19), Vector2(160, 88)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j22ea"]
+_data = {
+&"RESET": SubResource("Animation_2cld1"),
+&"attack": SubResource("Animation_lxidl")
+}
+
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_2cld1"]
 _data = PackedByteArray("AAADAAUAAAABAAAAMAAAADAAAABMAQAAUklGRkQBAABXRUJQVlA4TDcBAAAvL8ALEDdAFmAyunmk3p9BIGTSNvVvqVbGDEzAXiIBEv5xw+cmPxjmPwDAbZpK454X4Li2Hbf5Hms9wkwtEvAWWGf4WYCGnzqAJO9/DeLnJzPWEf1n5LZtJM1yZVH/gnD4fHSgHXhcNUCUgXhMSx9tgCgDIZ/P7UBmnHWOISveBtKigMDs2gAwow2Q91maAEAEaAGoG/yBmgAaPP0zANAClDvXgXLnFiBkxX0HMOSfz8DjqgGiCuDSEhQAVIA786iAx4cCRpH7HsCs9g5pcRlwIkHt/nJTO/fMRwUM/li5b2ZSPZ5qvdx0aTEqgUIyqktlVemndn9c1d6B2YGMJx7Tovdm7qNViMwx73p4Pnfeajgwdz5HVOv53BgA+AKwk/3xBWAGiAAGYD3d4A8GoJ+Ge//z1Xe3IgA=")
 size_override = Vector2(48, 48)
@@ -159,6 +222,64 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cld1"]
+size = Vector2(330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxidl"]
+size = Vector2(322, 20)
+
+[sub_resource type="Animation" id="Animation_j22ea"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(70, -160)]
+}
+
+[sub_resource type="Animation" id="Animation_lofgf"]
+resource_name = "in"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(70, -160), Vector2(70, 40)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pause"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsbuo"]
+_data = {
+&"RESET": SubResource("Animation_j22ea"),
+&"in": SubResource("Animation_lofgf")
+}
+
 [node name="weirdtree_minigame" type="Node2D" unique_id=485865318]
 script = ExtResource("1_l6s8n")
 
@@ -190,6 +311,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "3d14914dead8af713a48d3024e57bccf"
 
 [node name="owl" type="Node2D" parent="." unique_id=1567791662]
+z_index = 5
 position = Vector2(160, 19)
 script = ExtResource("2_2cld1")
 
@@ -214,6 +336,9 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 831237435947202370
 }
 metadata/_aseprite_wizard_source_file_hash_ = "d59479e2f8a1a2180601e578a740bd67"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="owl" unique_id=1505981331]
+libraries/ = SubResource("AnimationLibrary_j22ea")
 
 [node name="fruitSpawnPoints" type="Node2D" parent="." unique_id=834515239]
 
@@ -276,7 +401,7 @@ position = Vector2(13, 165)
 texture_filter = 1
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_1fiki")
-animation = &"throw"
+animation = &"pull"
 autoplay = "normal"
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
@@ -299,5 +424,69 @@ metadata/_aseprite_wizard_source_file_hash_ = "b15014b7e7382b0167fce36de4fd0b0d"
 [node name="rock_pos" type="Marker2D" parent="slingshot" unique_id=1749907633]
 position = Vector2(0, -12)
 
+[node name="DeleteArea" type="Area2D" parent="." unique_id=457026609]
+position = Vector2(160, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeleteArea" unique_id=1037027541]
+shape = SubResource("RectangleShape2D_2cld1")
+
+[node name="DeleteFruitArea" type="Area2D" parent="." unique_id=1676171285]
+position = Vector2(161, 197)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeleteFruitArea" unique_id=1581040766]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_lxidl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1891833416]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=575593488]
+process_mode = 2
+custom_minimum_size = Vector2(180, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -250.0
+offset_right = 90.0
+offset_bottom = -149.99994
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1956790086]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=184468016]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="FruitsNumber" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=569540357]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lxidl")
+theme_override_font_sizes/font_size = 10
+text = "Blue Fruits: 10"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=645899242]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_lxidl")
+theme_override_font_sizes/font_size = 8
+text = "Go back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=82699824]
+libraries/ = SubResource("AnimationLibrary_gsbuo")
+
 [connection signal="animation_finished" from="owl/AnimatedSprite2D" to="owl" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="owl/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="slingshot/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="DeleteArea" to="." method="_on_delete_area_area_entered"]
+[connection signal="area_entered" from="DeleteFruitArea" to="." method="_on_delete_fruit_area_area_entered"]

@@ -9,7 +9,7 @@ size = Vector2(8, 16)
 _data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABUAAAAUklGRkwAAABXRUJQVlA4TEAAAAAvD8ADEBcgFkx252+YlFgw2Zu/YSQCgSSI/a32mf+A6g8KIslpLgFMRA0SogNd3WhVENH/IAsfPEE1WGVXDTwB")
 size_override = Vector2(16, 16)
 
-[node name="blue_fruit" type="Area2D" unique_id=2105418599]
+[node name="blue_fruit" type="Area2D" unique_id=2105418599 groups=["blue_fruits"]]
 script = ExtResource("1_i3eva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890799167]
@@ -42,3 +42,5 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 4484899832209036303
 }
 metadata/_aseprite_wizard_source_file_hash_ = "30f2ec67fe1018c943c2ddb4f11dcaff"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

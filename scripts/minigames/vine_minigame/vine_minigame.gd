@@ -4,7 +4,7 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $scissors/AnimationPlayer
 
 const ORANGE_FRUIT = preload("uid://h0gsxojqpun2")
-
+var orange_fruits : int = 0
 
 func _ready() -> void:
 	spawn_fruits()

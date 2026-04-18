@@ -3,10 +3,12 @@ extends Node2D
 @onready var fruit_spawn_places: Node2D = $FruitSpawnPlaces
 @onready var witch: CharacterBody2D = $fruitgame_witch
 @onready var kick_label: Label = $KickLabel
+@onready var fruits_number: Label = $CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/FruitsNumber
+
 
 const RED_FRUIT = preload("uid://d3qh3xmsxot87")
 var fruits_in_tree : Array = []
-
+var red_fruits : int = 0
 
 var can_kick := false
 
@@ -47,3 +49,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and can_kick:
 		shake_tree()
 		
+func check_minigame_end():
+	if get_tree().get_nodes_in_group("fruits").size() == 0:
+		fruits_number.text = "Red Fruits: %s" % str(red_fruits)
+		$CanvasLayer/AnimationPlayer.play("in")
+	
+func pause():
+	get_tree().paused = true
+
+
+func _on_back_button_pressed() -> void:
+	Global.red_fruits += red_fruits

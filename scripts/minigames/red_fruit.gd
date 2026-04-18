@@ -7,7 +7,9 @@ var on_ground := false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is FruitMinigamePlayer and !on_ground:
+		get_parent().red_fruits += 1
 		queue_free()
+		get_parent().check_minigame_end()
 
 func shake():
 	var result = randi_range(1,10)
@@ -22,10 +24,11 @@ func fall():
 	
 func _process(delta: float) -> void:
 	if falling:
-		position.y += 75 * delta
+		position.y += 100 * delta
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "groundArea":
 		falling = false
 		on_ground = true
 		animated_sprite_2d.play("bad")
+		get_parent().check_minigame_end()
