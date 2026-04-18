@@ -1,9 +1,12 @@
 [gd_scene format=4 uid="uid://lsbk137vlims"]
 
 [ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="1_365ak"]
+[ext_resource type="Script" uid="uid://bgsqyxdcgy0c8" path="res://scripts/workplace/lab.gd" id="1_sn6m8"]
 [ext_resource type="Texture2D" uid="uid://c5lq5kmdirku7" path="res://assets/png/red_fruit.png" id="2_q6l1f"]
 [ext_resource type="Texture2D" uid="uid://c3b6yo61cb6wv" path="res://assets/png/orange_fruit.png" id="3_fnejq"]
 [ext_resource type="Texture2D" uid="uid://bihe5dva0jne3" path="res://assets/png/blue_fruit.png" id="4_6xubv"]
+[ext_resource type="Script" uid="uid://53hb50n8av1a" path="res://scripts/workplace/cursor.gd" id="5_6xubv"]
+[ext_resource type="Script" uid="uid://defnyyppbng16" path="res://scripts/workplace/bucket.gd" id="6_5nn33"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_16q11"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABUAQAAUklGRkwBAABXRUJQVlA4TD8BAAAvP8EsAF+gNpLUZog8ZHRAa/SOXK5SFEWS1LwuHxleGEgSUIZ7swFQ1FhsnOh/M9P8h0jXWTADBAsnaO+PVCBz1/vS6+QbcFtr25q8uMsInExgC2AD6L9HOlrKlGn/LnUqeraL63tiQET/HbiNpEjOMh7fH0Sw0U6JqX8RwUr1uPpA9KNB4OGRIUQ8UAF2+rgkoFABiCT6VFzI6UMkolQpF3ZQ9QCi6rmwhopX1Leh/HeiZ0SQTFp9ZHcWgUa8pf88ledx1Q/IvArimXEcIJzJylY1gg3qrAHoGVe+ybRwkFuJvSw1qfwqmoFlTemByo5TNDK3koMDNRmZW8XjuC41BthNvLzN5IAew6huon6TaU3en2ALehOThFRRkPn/dxViy8hmDJzjGsbZn+Oqv/gdwhC9/v77++/vv7//Wl0SAA==")
@@ -120,97 +123,6 @@ size_override = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_365ak"]
 size = Vector2(32, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fnejq"]
-radius = 22.090721
-
-[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_sn6m8"]
-_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAEAQAAUklGRvwAAABXRUJQVlA4TO8AAAAvX8AXECdAmG209/yVBnEUp6OobRuo35s/iGEYNiJtm7EZmH8d5zc2/wEg289P28F1I0lOtScSuJE2gZ0InkmB/JM6g27w8BPRf0Zu2ziKZuuJW15hd62M0iLERhx5dp+9P+5ui44Vdv2CSe6obqocGQhWyRwkt+5AiB1IqBM6mt9sxCHub/p5PcsAxA53H3esu7NgkjtQUjkyEKySOUhu3YEQO5BQJ3Q0f5nKYX87eoftbmwD8/iVAYgd7j7uWHdnwSR3oKRyZCBYJXOQ3LoDIXYgoU7oaP4ylcP+trZjWpzPsON/eI5peTb4Hs8iAwA=")
-size_override = Vector2(96, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ng88r"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_syvtf"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfvx6"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cv3ji"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mmhsu"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d37as"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4yqya"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vj2bf"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ba7w7"]
-atlas = SubResource("PortableCompressedTexture2D_sn6m8")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pyoc7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ng88r")
-}],
-"loop": true,
-"name": &"close",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_syvtf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yfvx6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cv3ji")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mmhsu")
-}],
-"loop": true,
-"name": &"loop",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d37as")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4yqya")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vj2bf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ba7w7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_syvtf")
-}],
-"loop": true,
-"name": &"open",
-"speed": 10.0
-}]
-
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_5nn33"]
 _data = PackedByteArray("AAADAAUAAAABAAAAMAAAACAAAADMAAAAUklGRsQAAABXRUJQVlA4TLcAAAAvL8AHECdApG2bG56OSTm8orZt4Fi/RXCOxwiybXODmMFEDvL5DwDplP38Dgxi24ryacADCvDHAowJUPuHkr+5BIjoPwO3beOo7e5NA/QLygCQKCDozMwlIMgsRvIFXVJ8ASSwBNc9GEOa6pjXPZohyBUARgoIdjHeFIxFDQhIQj8WYIGAINw3gBp+dwOj97E6bcnYy/8o8xKjaXCJAS3Q+L31Zb+3xu36AoHe8sFAp9/h99bE+xIA")
 size_override = Vector2(48, 32)
@@ -241,7 +153,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pyoc7")
 }],
-"loop": true,
+"loop": false,
 "name": &"empty",
 "speed": 10.0
 }, {
@@ -261,23 +173,154 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_opbjw")
 }],
-"loop": true,
+"loop": false,
 "name": &"filling",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_opbjw")
 }],
-"loop": true,
+"loop": false,
 "name": &"full",
 "speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xubv"]
-radius = 16.03122
+radius = 12.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nn33"]
+size = Vector2(4, 3)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_sn6m8"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAEAQAAUklGRvwAAABXRUJQVlA4TO8AAAAvX8AXECdAmG209/yVBnEUp6OobRuo35s/iGEYNiJtm7EZmH8d5zc2/wEg289P28F1I0lOtScSuJE2gZ0InkmB/JM6g27w8BPRf0Zu2ziKZuuJW15hd62M0iLERhx5dp+9P+5ui44Vdv2CSe6obqocGQhWyRwkt+5AiB1IqBM6mt9sxCHub/p5PcsAxA53H3esu7NgkjtQUjkyEKySOUhu3YEQO5BQJ3Q0f5nKYX87eoftbmwD8/iVAYgd7j7uWHdnwSR3oKRyZCBYJXOQ3LoDIXYgoU7oaP4ylcP+trZjWpzPsON/eI5peTb4Hs8iAwA=")
+size_override = Vector2(96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng88r"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syvtf"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfvx6"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv3ji"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmhsu"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyoc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng88r")
+}],
+"loop": true,
+"name": &"close",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syvtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfvx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv3ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmhsu")
+}],
+"loop": true,
+"name": &"loop",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sn6m8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6xubv")
+}],
+"loop": false,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fnejq")
+}],
+"loop": false,
+"name": &"orange",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q6l1f")
+}],
+"loop": false,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_3872l"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAACoAAAAUklGRqAAAABXRUJQVlA4TJQAAAAvH8AHEB8gEEiy2h9oH4FAEv+qSwgEkgz3R9hi/gPwV4Gj2rad5t4RCtLcPAnpRcL/aujNAc8jo9wHFiL6r7Bt24bp1CnAAbi+iOuPeHVEORHLrH6TugSHiVa5HNa7ZHMnFqd1GegyUWZIfyZKX1Px7+HYyLi+pG/MlaqMXlTTDqtc9YEHXYZMGTwTxZqKeOzk60sA")
+size_override = Vector2(32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7cpd"]
+atlas = SubResource("PortableCompressedTexture2D_3872l")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kfs2"]
+atlas = SubResource("PortableCompressedTexture2D_3872l")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3rty"]
+atlas = SubResource("PortableCompressedTexture2D_3872l")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5f81"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7cpd")
+}],
+"loop": true,
+"name": &"claw_hand",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kfs2")
+}],
+"loop": true,
+"name": &"click_hand",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3rty")
+}],
+"loop": true,
+"name": &"open_hand",
+"speed": 10.0
+}]
 
 [node name="lab" type="Node2D" unique_id=798029714]
+script = ExtResource("1_sn6m8")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1890463765]
 texture_filter = 1
@@ -401,6 +444,8 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "f6efde36e67a060f20d5f5636642f507"
 
+[node name="water_marker" type="Marker2D" parent="cauldron/water_container" unique_id=970691800]
+
 [node name="FruitsLabel" type="Label" parent="cauldron" unique_id=251176557]
 offset_left = 83.0
 offset_top = 85.0
@@ -441,10 +486,10 @@ text = "Open book
 (left click)"
 horizontal_alignment = 1
 
-[node name="crate" type="Area2D" parent="." unique_id=1416085755]
+[node name="red_fruit_crate" type="Area2D" parent="." unique_id=1416085755]
 position = Vector2(23, 74)
 
-[node name="crate_sprite" type="Sprite2D" parent="crate" unique_id=1985154395]
+[node name="crate_sprite" type="Sprite2D" parent="red_fruit_crate" unique_id=1985154395]
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_q6l1f")
 metadata/_aseprite_wizard_interface_config_ = {
@@ -470,17 +515,28 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
 
-[node name="fruit_sprite" type="Sprite2D" parent="crate" unique_id=817226895]
+[node name="fruit_sprite" type="Sprite2D" parent="red_fruit_crate" unique_id=817226895]
 position = Vector2(0, -2)
 texture = ExtResource("2_q6l1f")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="crate" unique_id=992443253]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="red_fruit_crate" unique_id=992443253]
 shape = SubResource("RectangleShape2D_365ak")
 
-[node name="crate2" type="Area2D" parent="." unique_id=481831234]
+[node name="RedFruitsLabel" type="Label" parent="red_fruit_crate" unique_id=1801543644]
+offset_left = 1.0
+offset_top = -23.0
+offset_right = 17.0
+offset_bottom = -17.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "10"
+horizontal_alignment = 2
+
+[node name="orange_fruit_crate" type="Area2D" parent="." unique_id=481831234]
 position = Vector2(23, 114)
 
-[node name="crate_sprite" type="Sprite2D" parent="crate2" unique_id=974928955]
+[node name="crate_sprite" type="Sprite2D" parent="orange_fruit_crate" unique_id=974928955]
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_q6l1f")
 metadata/_aseprite_wizard_interface_config_ = {
@@ -506,17 +562,29 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
 
-[node name="fruit_sprite" type="Sprite2D" parent="crate2" unique_id=253513892]
+[node name="fruit_sprite" type="Sprite2D" parent="orange_fruit_crate" unique_id=253513892]
 position = Vector2(0, -2)
 texture = ExtResource("3_fnejq")
+flip_v = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="crate2" unique_id=831209541]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orange_fruit_crate" unique_id=831209541]
 shape = SubResource("RectangleShape2D_365ak")
 
-[node name="crate3" type="Area2D" parent="." unique_id=446225449]
+[node name="OrangeFruitsLabel" type="Label" parent="orange_fruit_crate" unique_id=1767138105]
+offset_left = 1.0
+offset_top = -23.0
+offset_right = 17.0
+offset_bottom = -17.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "10"
+horizontal_alignment = 2
+
+[node name="blue_fruit_crate" type="Area2D" parent="." unique_id=446225449]
 position = Vector2(23, 155)
 
-[node name="crate_sprite" type="Sprite2D" parent="crate3" unique_id=1485746885]
+[node name="crate_sprite" type="Sprite2D" parent="blue_fruit_crate" unique_id=1485746885]
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_q6l1f")
 metadata/_aseprite_wizard_interface_config_ = {
@@ -542,24 +610,66 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
 
-[node name="fruit_sprite" type="Sprite2D" parent="crate3" unique_id=1946870563]
+[node name="fruit_sprite" type="Sprite2D" parent="blue_fruit_crate" unique_id=1946870563]
 position = Vector2(0, -2)
 texture = ExtResource("4_6xubv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="crate3" unique_id=1347104230]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blue_fruit_crate" unique_id=1347104230]
 shape = SubResource("RectangleShape2D_365ak")
+
+[node name="BlueFruitsLabel" type="Label" parent="blue_fruit_crate" unique_id=832055435]
+offset_left = 1.0
+offset_top = -23.0
+offset_right = 17.0
+offset_bottom = -17.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "10"
+horizontal_alignment = 2
+
+[node name="bucket" type="Area2D" parent="." unique_id=2073894561]
+position = Vector2(233, 55)
+script = ExtResource("6_5nn33")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bucket" unique_id=482962522]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_n7cpd")
+animation = &"filling"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/bucket.aseprite",
+"source_uid": 1797163622163966478
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d56e16fc5ba2fc451eb16e6c4c934e70"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bucket" unique_id=564969126]
+shape = SubResource("CircleShape2D_6xubv")
 
 [node name="tap" type="Area2D" parent="." unique_id=1572682157]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tap" unique_id=1157637739]
-position = Vector2(308, 111)
-shape = SubResource("CircleShape2D_fnejq")
+position = Vector2(303, 116)
+shape = SubResource("RectangleShape2D_5nn33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tap" unique_id=526261204]
 texture_filter = 1
 position = Vector2(304, 102)
 sprite_frames = SubResource("SpriteFrames_pyoc7")
 animation = &"close"
+autoplay = "close"
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -581,14 +691,21 @@ metadata/_aseprite_wizard_source_file_hash_ = "af86b4674cf886f6f23b260cbb3f27a8"
 [node name="Marker2D" type="Marker2D" parent="tap" unique_id=2138399492]
 position = Vector2(303, 122)
 
-[node name="bucket" type="Area2D" parent="." unique_id=2073894561]
-position = Vector2(233, 55)
+[node name="cursor" type="Node2D" parent="." unique_id=645148405]
+script = ExtResource("5_6xubv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bucket" unique_id=482962522]
+[node name="fruitSprite" type="AnimatedSprite2D" parent="cursor" unique_id=329926986]
+position = Vector2(-5, 0)
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_sn6m8")
+animation = &"none"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cursor" unique_id=1906706146]
 texture_filter = 1
-scale = Vector2(1.5, 1.5)
-sprite_frames = SubResource("SpriteFrames_n7cpd")
-animation = &"empty"
+position = Vector2(-1, 3)
+sprite_frames = SubResource("SpriteFrames_k5f81")
+animation = &"open_hand"
+autoplay = "open_hand"
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -602,10 +719,19 @@ metadata/_aseprite_wizard_config_ = {
 "scale": "1.0",
 "should_round_fps": true,
 "slice": "",
-"source": "res://assets/bucket.aseprite",
-"source_uid": 1797163622163966478
+"source": "res://assets/cursor.aseprite",
+"source_uid": 7325553592016699056
 }
-metadata/_aseprite_wizard_source_file_hash_ = "d56e16fc5ba2fc451eb16e6c4c934e70"
+metadata/_aseprite_wizard_source_file_hash_ = "e739a30717ce3ad837b9e0f2018e68ef"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bucket" unique_id=564969126]
-shape = SubResource("CircleShape2D_6xubv")
+[connection signal="mouse_entered" from="red_fruit_crate" to="." method="_on_red_fruit_crate_mouse_entered"]
+[connection signal="mouse_exited" from="red_fruit_crate" to="." method="_on_red_fruit_crate_mouse_exited"]
+[connection signal="mouse_entered" from="orange_fruit_crate" to="." method="_on_orange_fruit_crate_mouse_entered"]
+[connection signal="mouse_exited" from="orange_fruit_crate" to="." method="_on_orange_fruit_crate_mouse_exited"]
+[connection signal="mouse_entered" from="blue_fruit_crate" to="." method="_on_blue_fruit_crate_mouse_entered"]
+[connection signal="mouse_exited" from="blue_fruit_crate" to="." method="_on_blue_fruit_crate_mouse_exited"]
+[connection signal="area_entered" from="bucket" to="bucket" method="_on_area_entered"]
+[connection signal="area_exited" from="bucket" to="bucket" method="_on_area_exited"]
+[connection signal="mouse_entered" from="bucket" to="bucket" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="bucket" to="bucket" method="_on_mouse_exited"]
+[connection signal="animation_finished" from="bucket/AnimatedSprite2D" to="bucket" method="_on_animated_sprite_2d_animation_finished"]
