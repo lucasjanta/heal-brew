@@ -81,3 +81,8 @@ func _on_delete_fruit_area_area_entered(area: Area2D) -> void:
 		if fruits_remaining == 1:
 			fruits_number.text = "Blue Fruits: %s" % str(blue_fruits)
 			$CanvasLayer/AnimationPlayer.play("in")
+
+
+
+func _on_back_button_pressed() -> void:
+	Global.blue_fruits += blue_fruits

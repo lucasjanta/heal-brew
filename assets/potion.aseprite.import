@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ckdg7n48a27l3"
+path="res://.godot/imported/potion.aseprite-2914343b31b92a425434c42d6bab1e75.res"
+
+[deps]
+
+source_file="res://assets/potion.aseprite"
+dest_files=["res://.godot/imported/potion.aseprite-2914343b31b92a425434c42d6bab1e75.res"]
+
+[params]
+

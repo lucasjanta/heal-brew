@@ -326,7 +326,8 @@ rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_x4vki")
 animation = &"loop_anim"
-frame_progress = 0.34080032
+autoplay = "loop_anim"
+frame_progress = 0.8779078
 flip_v = true
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
@@ -361,6 +362,7 @@ rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_x4vki")
 animation = &"loop_anim"
+autoplay = "loop_anim"
 frame_progress = 0.24667683
 flip_v = true
 metadata/_aseprite_wizard_interface_config_ = {
@@ -396,6 +398,7 @@ rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_x4vki")
 animation = &"loop_anim"
+autoplay = "loop_anim"
 frame_progress = 0.24667683
 flip_v = true
 metadata/_aseprite_wizard_interface_config_ = {
@@ -453,7 +456,7 @@ theme_override_font_sizes/font_size = 10
 text = "Blue Fruits: 10"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=802145361]
+[node name="BackButton" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=802145361]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -467,3 +470,4 @@ libraries/ = SubResource("AnimationLibrary_gsbuo")
 [connection signal="area_entered" from="EnemyHead" to="EnemyHead" method="_on_area_entered"]
 [connection signal="area_entered" from="EnemyHead2" to="EnemyHead2" method="_on_area_entered"]
 [connection signal="area_entered" from="EnemyHead3" to="EnemyHead3" method="_on_area_entered"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

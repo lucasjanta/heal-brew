@@ -45,3 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func pause():
 	get_tree().paused = true
+
+
+func _on_back_button_pressed() -> void:
+	Global.orange_fruits += orange_fruits

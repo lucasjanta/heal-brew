@@ -1,0 +1,611 @@
+[gd_scene format=4 uid="uid://lsbk137vlims"]
+
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="1_365ak"]
+[ext_resource type="Texture2D" uid="uid://c5lq5kmdirku7" path="res://assets/png/red_fruit.png" id="2_q6l1f"]
+[ext_resource type="Texture2D" uid="uid://c3b6yo61cb6wv" path="res://assets/png/orange_fruit.png" id="3_fnejq"]
+[ext_resource type="Texture2D" uid="uid://bihe5dva0jne3" path="res://assets/png/blue_fruit.png" id="4_6xubv"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_16q11"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABUAQAAUklGRkwBAABXRUJQVlA4TD8BAAAvP8EsAF+gNpLUZog8ZHRAa/SOXK5SFEWS1LwuHxleGEgSUIZ7swFQ1FhsnOh/M9P8h0jXWTADBAsnaO+PVCBz1/vS6+QbcFtr25q8uMsInExgC2AD6L9HOlrKlGn/LnUqeraL63tiQET/HbiNpEjOMh7fH0Sw0U6JqX8RwUr1uPpA9KNB4OGRIUQ8UAF2+rgkoFABiCT6VFzI6UMkolQpF3ZQ9QCi6rmwhopX1Leh/HeiZ0SQTFp9ZHcWgUa8pf88ledx1Q/IvArimXEcIJzJylY1gg3qrAHoGVe+ybRwkFuJvSw1qfwqmoFlTemByo5TNDK3koMDNRmZW8XjuC41BthNvLzN5IAew6huon6TaU3en2ALehOThFRRkPn/dxViy8hmDJzjGsbZn+Oqv/gdwhC9/v77++/vv7//Wl0SAA==")
+size_override = Vector2(320, 180)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_365ak"]
+_data = PackedByteArray("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")
+size_override = Vector2(960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6l1f"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjx33"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnejq"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xubv"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(0, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn6m8"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(320, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nn33"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(640, 180, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3872l"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(0, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd66p"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(320, 360, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eotdi"]
+atlas = SubResource("PortableCompressedTexture2D_365ak")
+region = Rect2(640, 360, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ng88r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6l1f")
+}],
+"loop": true,
+"name": &"cauldron_off",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjx33")
+}],
+"loop": true,
+"name": &"cauldron_off_water",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnejq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xubv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn6m8")
+}],
+"loop": true,
+"name": &"cauldron_on",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nn33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3872l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd66p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eotdi")
+}],
+"loop": true,
+"name": &"water_boiling",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnejq"]
+size = Vector2(62, 20)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_fnejq"]
+_data = PackedByteArray("AAADAAUAAAABAAAAFAAAADAAAABWAAAAUklGRk4AAABXRUJQVlA4TEIAAAAvE8ALABegJEAAFFVETJqG7mUQhQQp7lSd/8gvDNS2bSOpziTG7ZP9Uh606j11RP/nAYBRK0DS3QcB2er6UGHUAgA=")
+size_override = Vector2(20, 48)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_6xubv"]
+_data = PackedByteArray("AAADAAUAAAABAAAAFgAAABYAAABWAAAAUklGRk4AAABXRUJQVlA4TEIAAAAvFUAFABegJEAAFFVETJqG7mUQhQQp7lSd/8gvDBQ1khR1Vg2G1g+nF9I6lx8CIvo/AZRXNaoG9GiZef4D9LiqD0o=")
+size_override = Vector2(22, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q6l1f"]
+radius = 15.0
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_q6l1f"]
+_data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAABWAAAAUklGRk4AAABXRUJQVlA4TEIAAAAvH8AHABcgEEhxBgssEEhxGnssFkzx/kCa/8BfBQoaSXEuSGgm0AMeyevsRUBE/ycAw2pd/w4N+BgN/B8YRnZtDUM=")
+size_override = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_365ak"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fnejq"]
+radius = 22.090721
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_sn6m8"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAAAEAQAAUklGRvwAAABXRUJQVlA4TO8AAAAvX8AXECdAmG209/yVBnEUp6OobRuo35s/iGEYNiJtm7EZmH8d5zc2/wEg289P28F1I0lOtScSuJE2gZ0InkmB/JM6g27w8BPRf0Zu2ziKZuuJW15hd62M0iLERhx5dp+9P+5ui44Vdv2CSe6obqocGQhWyRwkt+5AiB1IqBM6mt9sxCHub/p5PcsAxA53H3esu7NgkjtQUjkyEKySOUhu3YEQO5BQJ3Q0f5nKYX87eoftbmwD8/iVAYgd7j7uWHdnwSR3oKRyZCBYJXOQ3LoDIXYgoU7oaP4ylcP+trZjWpzPsON/eI5peTb4Hs8iAwA=")
+size_override = Vector2(96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng88r"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syvtf"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfvx6"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv3ji"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmhsu"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d37as"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yqya"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj2bf"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba7w7"]
+atlas = SubResource("PortableCompressedTexture2D_sn6m8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyoc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng88r")
+}],
+"loop": true,
+"name": &"close",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syvtf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfvx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv3ji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmhsu")
+}],
+"loop": true,
+"name": &"loop",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d37as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yqya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj2bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba7w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syvtf")
+}],
+"loop": true,
+"name": &"open",
+"speed": 10.0
+}]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_5nn33"]
+_data = PackedByteArray("AAADAAUAAAABAAAAMAAAACAAAADMAAAAUklGRsQAAABXRUJQVlA4TLcAAAAvL8AHECdApG2bG56OSTm8orZt4Fi/RXCOxwiybXODmMFEDvL5DwDplP38Dgxi24ryacADCvDHAowJUPuHkr+5BIjoPwO3beOo7e5NA/QLygCQKCDozMwlIMgsRvIFXVJ8ASSwBNc9GEOa6pjXPZohyBUARgoIdjHeFIxFDQhIQj8WYIGAINw3gBp+dwOj97E6bcnYy/8o8xKjaXCJAS3Q+L31Zb+3xu36AoHe8sFAp9/h99bE+xIA")
+size_override = Vector2(48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyoc7"]
+atlas = SubResource("PortableCompressedTexture2D_5nn33")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b266e"]
+atlas = SubResource("PortableCompressedTexture2D_5nn33")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kxvm"]
+atlas = SubResource("PortableCompressedTexture2D_5nn33")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olxi1"]
+atlas = SubResource("PortableCompressedTexture2D_5nn33")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opbjw"]
+atlas = SubResource("PortableCompressedTexture2D_5nn33")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7cpd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyoc7")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyoc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b266e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kxvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olxi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opbjw")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opbjw")
+}],
+"loop": true,
+"name": &"full",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xubv"]
+radius = 16.03122
+
+[node name="lab" type="Node2D" unique_id=798029714]
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1890463765]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_16q11")
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/lab.aseprite",
+"source_uid": 2618565923142946936
+}
+metadata/_aseprite_wizard_source_file_hash_ = "c70ebfe2264b74df2a3d21ed6525075f"
+
+[node name="cauldron" type="Node2D" parent="." unique_id=1382396296]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="cauldron" unique_id=501829657]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ng88r")
+animation = &"cauldron_off"
+centered = false
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/lab.aseprite",
+"source_uid": 2618565923142946936
+}
+metadata/_aseprite_wizard_source_file_hash_ = "12aa7befc15e9f82c1db4434020d4778"
+
+[node name="cauldron_mouth" type="Area2D" parent="cauldron" unique_id=939558668]
+position = Vector2(160, 100)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cauldron/cauldron_mouth" unique_id=121414186]
+shape = SubResource("RectangleShape2D_fnejq")
+
+[node name="fruit_container" type="Sprite2D" parent="cauldron" unique_id=2007901079]
+texture_filter = 1
+position = Vector2(97, 120)
+texture = SubResource("PortableCompressedTexture2D_fnejq")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/fruit_container.aseprite",
+"source_uid": 3200300533730113095
+}
+metadata/_aseprite_wizard_source_file_hash_ = "c9bf435c0d7721b6c8f12cf5eda6fb8d"
+
+[node name="fruit1" type="Marker2D" parent="cauldron/fruit_container" unique_id=121419254]
+position = Vector2(0, -15)
+
+[node name="fruit2" type="Marker2D" parent="cauldron/fruit_container" unique_id=1171347580]
+
+[node name="fruit3" type="Marker2D" parent="cauldron/fruit_container" unique_id=875929432]
+position = Vector2(0, 15)
+
+[node name="water_container" type="Sprite2D" parent="cauldron" unique_id=1087954050]
+texture_filter = 1
+position = Vector2(225, 120)
+texture = SubResource("PortableCompressedTexture2D_6xubv")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/water_container.aseprite",
+"source_uid": 7083044936165183373
+}
+metadata/_aseprite_wizard_source_file_hash_ = "f6efde36e67a060f20d5f5636642f507"
+
+[node name="FruitsLabel" type="Label" parent="cauldron" unique_id=251176557]
+offset_left = 83.0
+offset_top = 85.0
+offset_right = 113.0
+offset_bottom = 91.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "fruits"
+
+[node name="WaterLabel" type="Label" parent="cauldron" unique_id=397745938]
+offset_left = 211.0
+offset_top = 99.0
+offset_right = 239.0
+offset_bottom = 105.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "water"
+
+[node name="BookInteract" type="Area2D" parent="." unique_id=843349773]
+position = Vector2(161, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BookInteract" unique_id=1728005460]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_q6l1f")
+
+[node name="Label" type="Label" parent="BookInteract" unique_id=2027252138]
+visible = false
+offset_left = -35.0
+offset_top = -34.0
+offset_right = 41.0
+offset_bottom = -11.0
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "Open book
+(left click)"
+horizontal_alignment = 1
+
+[node name="crate" type="Area2D" parent="." unique_id=1416085755]
+position = Vector2(23, 74)
+
+[node name="crate_sprite" type="Sprite2D" parent="crate" unique_id=1985154395]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_q6l1f")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/crate.aseprite",
+"source_uid": 7524449711738379859
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
+
+[node name="fruit_sprite" type="Sprite2D" parent="crate" unique_id=817226895]
+position = Vector2(0, -2)
+texture = ExtResource("2_q6l1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crate" unique_id=992443253]
+shape = SubResource("RectangleShape2D_365ak")
+
+[node name="crate2" type="Area2D" parent="." unique_id=481831234]
+position = Vector2(23, 114)
+
+[node name="crate_sprite" type="Sprite2D" parent="crate2" unique_id=974928955]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_q6l1f")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/crate.aseprite",
+"source_uid": 7524449711738379859
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
+
+[node name="fruit_sprite" type="Sprite2D" parent="crate2" unique_id=253513892]
+position = Vector2(0, -2)
+texture = ExtResource("3_fnejq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crate2" unique_id=831209541]
+shape = SubResource("RectangleShape2D_365ak")
+
+[node name="crate3" type="Area2D" parent="." unique_id=446225449]
+position = Vector2(23, 155)
+
+[node name="crate_sprite" type="Sprite2D" parent="crate3" unique_id=1485746885]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_q6l1f")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/crate.aseprite",
+"source_uid": 7524449711738379859
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1c24cc4bb4b879bf9b16a8943143124a"
+
+[node name="fruit_sprite" type="Sprite2D" parent="crate3" unique_id=1946870563]
+position = Vector2(0, -2)
+texture = ExtResource("4_6xubv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crate3" unique_id=1347104230]
+shape = SubResource("RectangleShape2D_365ak")
+
+[node name="tap" type="Area2D" parent="." unique_id=1572682157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tap" unique_id=1157637739]
+position = Vector2(308, 111)
+shape = SubResource("CircleShape2D_fnejq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tap" unique_id=526261204]
+texture_filter = 1
+position = Vector2(304, 102)
+sprite_frames = SubResource("SpriteFrames_pyoc7")
+animation = &"close"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/can.aseprite",
+"source_uid": 7317856126720979668
+}
+metadata/_aseprite_wizard_source_file_hash_ = "af86b4674cf886f6f23b260cbb3f27a8"
+
+[node name="Marker2D" type="Marker2D" parent="tap" unique_id=2138399492]
+position = Vector2(303, 122)
+
+[node name="bucket" type="Area2D" parent="." unique_id=2073894561]
+position = Vector2(233, 55)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bucket" unique_id=482962522]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_n7cpd")
+animation = &"empty"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/bucket.aseprite",
+"source_uid": 1797163622163966478
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d56e16fc5ba2fc451eb16e6c4c934e70"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bucket" unique_id=564969126]
+shape = SubResource("CircleShape2D_6xubv")
