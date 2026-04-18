@@ -2,12 +2,19 @@ extends Node2D
 
 @onready var cursor: Node2D = $cursor
 @onready var water_sprite: Sprite2D = $cauldron/water_container/waterSprite
+@onready var cauldron_sprites: AnimatedSprite2D = $cauldron/cauldron_sprites
+@onready var water_boil_sprites: AnimatedSprite2D = $cauldron/water_boil_sprites
+@onready var multi_button: Button = $MultiButton
+
 
 var fruit_under : String = "none"
 var fruit_on_hold : String = "none"
 var over_cauldron := false
 var water_in := false
 var fruits_on_cauldron : Array = []
+
+var cauldron_timer := 3.0
+var cauldron_on := false
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
@@ -20,7 +27,6 @@ func _on_red_fruit_crate_mouse_entered() -> void:
 func _on_orange_fruit_crate_mouse_entered() -> void:
 	fruit_under = "orange"
 	print(fruit_under)
-
 
 func _on_blue_fruit_crate_mouse_entered() -> void:
 	fruit_under = "blue"
@@ -77,6 +83,41 @@ func update_fruits_on():
 			3:
 				$cauldron/fruit_container/fruit3.texture = load("res://assets/png/%s_fruit.png" % fruit)
 		i += 1
+	if fruits_on_cauldron.size() > 0 and water_in:
+		multi_button.visible = true
 
 func update_water_on():
 	water_sprite.visible = water_in
+	cauldron_sprites.play("cauldron_off_water")
+	water_boil_sprites.play("cauldron_off_water")
+	if fruits_on_cauldron.size() > 0 and water_in:
+		multi_button.visible = true
+	
+
+func _on_multi_button_pressed() -> void:
+	if multi_button.text == "cauldron on!":
+		cauldron_sprites.play("cauldron_on")
+
+func _on_cauldron_sprites_animation_finished() -> void:
+	if cauldron_sprites.animation == "cauldron_on":
+		cauldron_on = true
+
+func boil_water():
+	water_boil_sprites.play("water_boiling")
+	
+	
+
+func _process(delta: float) -> void:
+	if cauldron_on:
+		if cauldron_timer > 0.0:
+			cauldron_timer -= delta
+		else:
+			boil_water()
+			cauldron_timer == 0.0
+
+func end_potion():
+	multi_button.text = "take potion!"
+	multi_button.visible = true
+	cauldron_on = false
+	cauldron_sprites.play("cauldron_off")
+	water_boil_sprites.play("cauldron_off_water")
