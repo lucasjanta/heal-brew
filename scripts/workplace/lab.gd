@@ -104,7 +104,7 @@ func _on_cauldron_sprites_animation_finished() -> void:
 
 func boil_water():
 	water_boil_sprites.play("water_boiling")
-	
+	potion_result()
 	
 
 func _process(delta: float) -> void:
@@ -121,3 +121,6 @@ func end_potion():
 	cauldron_on = false
 	cauldron_sprites.play("cauldron_off")
 	water_boil_sprites.play("cauldron_off_water")
+
+func potion_result():
+	pass
