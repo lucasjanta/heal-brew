@@ -5,6 +5,7 @@ extends Node2D
 @onready var cauldron_sprites: AnimatedSprite2D = $cauldron/cauldron_sprites
 @onready var water_boil_sprites: AnimatedSprite2D = $cauldron/water_boil_sprites
 @onready var multi_button: Button = $MultiButton
+@onready var potion_result_anim: AnimationPlayer = $cauldron/PotionResultAnim
 
 
 var fruit_under : String = "none"
@@ -83,20 +84,21 @@ func update_fruits_on():
 			3:
 				$cauldron/fruit_container/fruit3.texture = load("res://assets/png/%s_fruit.png" % fruit)
 		i += 1
-	if fruits_on_cauldron.size() > 0 and water_in:
+	if fruits_on_cauldron.size() == 3 and water_in:
 		multi_button.visible = true
 
 func update_water_on():
 	water_sprite.visible = water_in
 	cauldron_sprites.play("cauldron_off_water")
 	water_boil_sprites.play("cauldron_off_water")
-	if fruits_on_cauldron.size() > 0 and water_in:
+	if fruits_on_cauldron.size() == 3 and water_in:
 		multi_button.visible = true
 	
 
 func _on_multi_button_pressed() -> void:
 	if multi_button.text == "cauldron on!":
 		cauldron_sprites.play("cauldron_on")
+		multi_button.visible = false
 
 func _on_cauldron_sprites_animation_finished() -> void:
 	if cauldron_sprites.animation == "cauldron_on":
@@ -123,4 +125,28 @@ func end_potion():
 	water_boil_sprites.play("cauldron_off_water")
 
 func potion_result():
-	pass
+	var result : String
+	if fruits_on_cauldron.count("red") == 3:
+		result = "red_potion"
+	elif fruits_on_cauldron.count("red") == 2 and fruits_on_cauldron.count("blue") == 1:
+		result = "purple_potion"
+	elif fruits_on_cauldron.count("orange") == 3:
+		result = "yellow_potion"
+	elif fruits_on_cauldron.count("orange") == 2 and fruits_on_cauldron.count("red") == 1:
+		result = "orange_potion"
+	elif fruits_on_cauldron.count("blue") == 3:
+		result = "blue_potion"
+	elif fruits_on_cauldron.count("blue") == 2 and fruits_on_cauldron.count("orange") == 1:
+		result = "green_potion"
+	elif fruits_on_cauldron.count("blue") == 1 and fruits_on_cauldron.count("orange") == 1 and fruits_on_cauldron.count("red") == 1:
+		result = "cyan_potion"
+
+	water_in = false
+	fruits_on_cauldron.clear()
+	water_sprite.visible = water_in
+	$cauldron/fruit_container/fruit1.texture = null
+	$cauldron/fruit_container/fruit2.texture = null
+	$cauldron/fruit_container/fruit3.texture = null
+	
+	potion_result_anim.play(result)
+	
