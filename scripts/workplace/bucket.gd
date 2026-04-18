@@ -19,7 +19,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		grabbing = true
 	if event.is_action_released("click") and grabbing:
 		if on_cauldron and animated_sprite_2d.animation == "full":
-			print("add to cauldron")
+			get_parent().water_in = true
+			get_parent().update_water_on()
 		grabbing = false
 		animated_sprite_2d.play("empty")
 		global_position = Vector2(233.0, 55.0)
