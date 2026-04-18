@@ -1,0 +1,337 @@
+[gd_scene format=4 uid="uid://dvmyuwltart7"]
+
+[ext_resource type="Script" uid="uid://ca6r01wcfk35k" path="res://scripts/workplace/client.gd" id="1_ow0tr"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_hycd6"]
+_data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAADwAgAAUklGRugCAABXRUJQVlA4TNwCAAAvX8AXEK/AKAAAM2fj67nL8q7CsjiAorAJADDJ3N1wCEAoXhoQWwsorW2niQ29ye7RzMJIbMYUzJCDjpn/AAAqmSguSYowch5LxCL4jf1VmSi6djIPDNxTzVnfDV1oAlmWf9vOz8pjvZ77uEDLtu24bfSOWxAiTFLNnf9cH0C/t4gkVX8R/Z8A/Y/M6avYMAbqabiEfQwtpv7yz2Qnp7UP48yc2WUYEcW6mpmtK1GcjMORwbquKzG4jW3bNjZHzDBhGFPdkFprGGRBFmR1U7op3Thg34E4YF2BKPy24YMkOSXah/sw/R5qrUhykqi1QgA4iAMHAaJWJHAgUSv6Pfvu9p0oHg/3eBAgkHg+3fOJBAqCBHPgLMA76MWyD4Psg8eQDwvi2SUBR5jxwPHAojYcW0Y3SjqjYDa6CbDv+w5RxkmL27Zty9h7e5B9sLKu68rKh13kZIyMk6agk1Fi76JwXl0UTumiBIAcgJRhipQl5WxIbBk4MnBcaXd7xurWK+HIwJGBI+GPbyevBMSZvQ3NrsOBwu3ttF0D4MCH2Nsv7QocJ5kS55jScfoqJpNMFmZwHAdgV7GTYa1x0FoLs5Nh92GQoLUGtAaKtDeWIW+mUEbE0VprRMlYcCyYonCEiTZEwSxDFDZMgSzIgqxuSjelGwe0BsQBywLEAfc7ECbJKdUp1SkRHMSBgzhwEMbr5V4volh6C1GU4kohA7J8DiT1M2qtNaefgONKOKbWTaDHdeB+v98hrvXade5073Enw06GQSmlQJh476JwXl0Uzp1SuKMEgByAJMiSsqQsKQdHBo4rNdcyFrdcCUcGjgwcCf/5m/XMpnWYs2Nih5nZMbHb0b3N6+S0fobTYsS8cMxsODWYXXdewM8PMC0hJzRrCo7CtCiuMK8b3dus4DaEaXH7+roxKzq3W4cpFehBmdVP72deJ2dV+O5SJgYwuVLmhmNawCfAJzAlSYAEaKo=")
+size_override = Vector2(96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oc6o0"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mypst"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2ous"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qpke"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13nq4"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jmf1"]
+atlas = SubResource("PortableCompressedTexture2D_hycd6")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktbse"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oc6o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mypst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2ous")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qpke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13nq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jmf1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ow0tr"]
+_data = PackedByteArray("AAADAAUAAAABAAAAMAAAADAAAAA6AQAAUklGRjIBAABXRUJQVlA4TCYBAAAvL8ALEEegJAAaBk0AJJoEC7tor5eiNlKgXXjdKlCEIgziSWnbRlDVGUrL7lv1Zj1+eP4DAJqqQ/Wbo9bxf7LLY4BqbXvbRr6D/On6cJB4Ju32FfSUZ/CihP5Wx3fd1i/pTxeO6L8Ct22UHGMOfhH8QUxwCCY0oWsLlFSQUPZ87wnNDFZgeR+jYTZEH5GxgFpvxFgBhNIUJhsKROtwsFOgr61lcUbC/25BRBQS2oIcFMEr6JyCiYS24Jzwm/59kzbJvG9PGsHpZATb1XZVoCMgv6gjm+1hnzIP75k3EchN5mVlsv7hVnXkeINjhvPD3HIp9YzbZaJtNLq5STSwsuw//ncHpbdN+b4eIBAfAkBdmNyfndHtX/Zt71b5Z19QBC9dk5/45wA=")
+size_override = Vector2(48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofo2t"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvey3"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aigpa"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opwfu"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyrgk"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0marw"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw10u"]
+atlas = SubResource("PortableCompressedTexture2D_ow0tr")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccaax"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofo2t")
+}],
+"loop": true,
+"name": &"amoeba",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvey3")
+}],
+"loop": true,
+"name": &"anemia",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aigpa")
+}],
+"loop": true,
+"name": &"bone",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opwfu")
+}],
+"loop": true,
+"name": &"cold",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyrgk")
+}],
+"loop": true,
+"name": &"confusion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0marw")
+}],
+"loop": true,
+"name": &"fever",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw10u")
+}],
+"loop": true,
+"name": &"forever",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_m38sy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("clientSprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [109.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("diseaseSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_oc6o0"]
+resource_name = "arrive"
+length = 2.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("clientSprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6, 1.8000001, 2, 2.2000003, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.06981317007977318, 0.0, -0.06981317007977318, 0.0, 0.06981317007977318, 0.0, -0.06981317007977318, 0.0, 0.06981317007977318, 0.0, -0.06981317007977318, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [110.0, 90.0, 84.0, 110.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25), Vector2(3, 3)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("diseaseSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mypst"]
+_data = {
+&"RESET": SubResource("Animation_m38sy"),
+&"arrive": SubResource("Animation_oc6o0")
+}
+
+[node name="client" type="Node2D" unique_id=1662793304]
+position = Vector2(0, 109)
+script = ExtResource("1_ow0tr")
+
+[node name="clientSprite" type="AnimatedSprite2D" parent="." unique_id=273597531]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ktbse")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/character_base.aseprite",
+"source_uid": 7120268408309986767
+}
+metadata/_aseprite_wizard_source_file_hash_ = "b502d33c7b313f0bd55a31db293b53b9"
+
+[node name="diseaseSprite" type="AnimatedSprite2D" parent="." unique_id=1200787329]
+visible = false
+z_index = 10
+texture_filter = 1
+position = Vector2(7, -12)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_ccaax")
+animation = &"fever"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/disease_talk.aseprite",
+"source_uid": 4955339555032777806
+}
+metadata/_aseprite_wizard_source_file_hash_ = "65ee67b8e61d8fbff1646f8e571610e3"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1411534538]
+libraries/ = SubResource("AnimationLibrary_mypst")
+autoplay = &"arrive"

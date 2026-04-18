@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://csneyds0p2pe5"]
 
+[ext_resource type="Script" uid="uid://drnj742vc2k5s" path="res://scripts/workplace/workplace.gd" id="1_m38sy"]
+
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_72r4b"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAmAAAAUklGRh4AAABXRUJQVlA4TBEAAAAvP8EsAAfQ9q43vf+BiOh/AAA=")
 size_override = Vector2(320, 180)
@@ -13,8 +15,11 @@ _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABMAgAAUklGRkQCAABXRUJQVlA4TDg
 size_override = Vector2(320, 180)
 
 [node name="Workplace" type="Node2D" unique_id=96866077]
+script = ExtResource("1_m38sy")
 
 [node name="sky" type="Sprite2D" parent="." unique_id=2081283874]
+modulate = Color(0.6, 1, 1, 1)
+z_index = -1
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_72r4b")
 centered = false
@@ -43,6 +48,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "74f8d23d752fed6a323d2377e0831979"
 
 [node name="ground" type="Sprite2D" parent="." unique_id=1481524005]
+z_index = 1
 texture_filter = 1
 position = Vector2(0, 15)
 texture = SubResource("PortableCompressedTexture2D_gkndc")
@@ -72,6 +78,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "3ee2212ff32318628b7b16441e6cf9cd"
 
 [node name="cart" type="Sprite2D" parent="." unique_id=1108260460]
+z_index = 4
 texture_filter = 1
 texture = SubResource("PortableCompressedTexture2D_3juwg")
 centered = false

@@ -1,0 +1,309 @@
+[gd_scene format=3 uid="uid://1jdw4d2d0iq2"]
+
+[ext_resource type="Script" uid="uid://cwcfaf4jb4yjx" path="res://scripts/UI/day_tutorial.gd" id="1_b7kef"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_q8b4p"]
+[ext_resource type="Texture2D" uid="uid://cf65t7j0pabf7" path="res://assets/tutorial/1.png" id="3_5v1y6"]
+[ext_resource type="Texture2D" uid="uid://dgalnlkl2jshn" path="res://assets/tutorial/2.png" id="4_y4set"]
+[ext_resource type="Texture2D" uid="uid://d2ppd6la62jtd" path="res://assets/tutorial/3.png" id="5_3f6rr"]
+[ext_resource type="Texture2D" uid="uid://7j3crub0moud" path="res://assets/tutorial/4.png" id="6_b8xuv"]
+[ext_resource type="Texture2D" uid="uid://by5e00kxfdoq3" path="res://assets/tutorial/5.png" id="7_lnql1"]
+
+[node name="FruitFallTutorial" type="Control" unique_id=536863042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7kef")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=821101640]
+custom_minimum_size = Vector2(260, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=507574264]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=284061989]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1784878315]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 8
+text = "skip tutorial"
+
+[node name="screen1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=457583179]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen1" unique_id=1856198099]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer" unique_id=1327811622]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_5v1y6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer" unique_id=1906280124]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Collect fruits in the forest"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen1" unique_id=435695690]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer4" unique_id=1305710006]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_y4set")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer4" unique_id=1557741981]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Check the patient disease"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen1" unique_id=1803122442]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer5" unique_id=1589435894]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_3f6rr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer5" unique_id=1463096915]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Create a potion for it"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen1" unique_id=1762810894]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer2" unique_id=1619537659]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer2" unique_id=59613029]
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen1" unique_id=1987553104]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer3" unique_id=1491456406]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer3" unique_id=1790310794]
+layout_mode = 2
+
+[node name="screen2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1760864382]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen2" unique_id=1177904542]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer" unique_id=1762051278]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_b8xuv")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer" unique_id=597571918]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "use [WASD] to walk and [e] to interact"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen2" unique_id=1136017098]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer4" unique_id=2028246034]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_lnql1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer4" unique_id=1238710600]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "go off-screen to get out of the forest"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen2" unique_id=1330016766]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer2" unique_id=1411365606]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer2" unique_id=313156434]
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen2" unique_id=2122185201]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer3" unique_id=1010369522]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen2/VBoxContainer3" unique_id=1015339827]
+layout_mode = 2
+
+[node name="screen3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1362279376]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen3" unique_id=1153154879]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer" unique_id=700845752]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_5v1y6")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer" unique_id=939067842]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Collect fruits in the forest"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen3" unique_id=1051416205]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer4" unique_id=958312215]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_y4set")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer4" unique_id=2137186877]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Check the patient disease"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen3" unique_id=2031791546]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer5" unique_id=1689013620]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_3f6rr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer5" unique_id=285079953]
+custom_minimum_size = Vector2(77, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 6
+text = "Create a potion for it"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen3" unique_id=1849673751]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer2" unique_id=795585166]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer2" unique_id=1775264680]
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/screen3" unique_id=1667350222]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer3" unique_id=1906395462]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen3/VBoxContainer3" unique_id=1778103614]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1178072238]
+layout_mode = 2
+alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1151756041]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 8
+text = "<"
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1032070525]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_font_sizes/font_size = 8
+text = ">"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]

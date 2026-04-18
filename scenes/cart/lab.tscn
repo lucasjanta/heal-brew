@@ -190,6 +190,73 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FailLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(149, 80)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FailLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d37as"]
+resource_name = "bad_potion"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FailLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(149, 80), Vector2(149, 70), Vector2(149, 70), Vector2(149, 60)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FailLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"bad_potion"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_eotdi"]
 resource_name = "blue_potion"
@@ -411,6 +478,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qd66p"]
 _data = {
 &"RESET": SubResource("Animation_qd66p"),
+&"bad_potion": SubResource("Animation_d37as"),
 &"blue_potion": SubResource("Animation_eotdi"),
 &"cyan_potion": SubResource("Animation_ng88r"),
 &"green_potion": SubResource("Animation_syvtf"),
@@ -626,6 +694,96 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_4yqya"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("potionSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("potionSprite:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("potionSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vj2bf"]
+resource_name = "deliver"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("potionSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(100, -40), Vector2(135, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("potionSprite:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("potionSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ba7w7"]
+_data = {
+&"RESET": SubResource("Animation_4yqya"),
+&"deliver": SubResource("Animation_vj2bf")
+}
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ng88r"]
+_data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABcAAAAUklGRlQAAABXRUJQVlA4TEgAAAAvD8ADEBcgFkx252+YlFgw2Zu/YSQCgSSI/a32mf+A6g+sIttOc0L/nIKaSCipiK6yTrIQ0f+gCBgMWP239s+rUu5b/HNVWBI=")
+size_override = Vector2(16, 16)
+
 [node name="lab" type="Node2D" unique_id=798029714]
 script = ExtResource("1_sn6m8")
 
@@ -687,7 +845,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "45ffeacea94581283ac59efe1da17b90"
 [node name="water_boil_sprites" type="AnimatedSprite2D" parent="cauldron" unique_id=1322867029]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_oa7rc")
-animation = &"water_boiling"
+animation = &"cauldron_off"
 autoplay = "cauldron_off"
 centered = false
 metadata/_aseprite_wizard_interface_config_ = {
@@ -804,6 +962,17 @@ theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("1_365ak")
 theme_override_font_sizes/font_size = 6
 text = "water"
+
+[node name="FailLabel" type="Label" parent="cauldron" unique_id=833624581]
+modulate = Color(1, 1, 1, 0)
+offset_left = 149.0
+offset_top = 80.0
+offset_right = 172.0
+offset_bottom = 86.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 6
+text = "Fail!"
 
 [node name="PotionResultAnim" type="AnimationPlayer" parent="cauldron" unique_id=1954090978]
 libraries/ = SubResource("AnimationLibrary_qd66p")
@@ -1076,6 +1245,39 @@ offset_bottom = 87.0
 theme_override_fonts/font = ExtResource("1_365ak")
 theme_override_font_sizes/font_size = 6
 text = "cauldron on!"
+
+[node name="newPotion" type="Node2D" parent="." unique_id=896728234]
+position = Vector2(161, 95)
+
+[node name="DeliverPotionAnim" type="AnimationPlayer" parent="newPotion" unique_id=1180720010]
+libraries/ = SubResource("AnimationLibrary_ba7w7")
+
+[node name="potionSprite" type="Sprite2D" parent="newPotion" unique_id=1139310798]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_ng88r")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/potion.aseprite",
+"source_uid": 5481345113493608266
+}
+metadata/_aseprite_wizard_source_file_hash_ = "1217dc086ca37d79f86bf9fdc5bd8063"
 
 [connection signal="animation_finished" from="cauldron/cauldron_sprites" to="." method="_on_cauldron_sprites_animation_finished"]
 [connection signal="mouse_entered" from="cauldron/cauldron_mouth" to="." method="_on_cauldron_mouth_mouse_entered"]
