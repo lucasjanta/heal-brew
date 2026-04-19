@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://yx4noa04oexp" path="res://assets/ui/ring_over.png" id="3_hdmlo"]
 [ext_resource type="Texture2D" uid="uid://dpvl1xs8r8ict" path="res://assets/ui/ring_progress.png" id="4_h6f3h"]
 [ext_resource type="Script" uid="uid://d06mi25my2enu" path="res://scripts/minigames/vine_minigame/enemy_head.gd" id="5_hdmlo"]
-[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="6_h6f3h"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_uxgl8"]
 _data = PackedByteArray("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")
@@ -144,58 +143,6 @@ animations = [{
 "name": &"loop_anim",
 "speed": 8.0
 }]
-
-[sub_resource type="Animation" id="Animation_j22ea"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(70, -160)]
-}
-
-[sub_resource type="Animation" id="Animation_lofgf"]
-resource_name = "in"
-length = 0.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PanelContainer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(70, -160), Vector2(70, 40)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"pause"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gsbuo"]
-_data = {
-&"RESET": SubResource("Animation_j22ea"),
-&"in": SubResource("Animation_lofgf")
-}
 
 [node name="vine_minigame" type="Node2D" unique_id=1949345397]
 script = ExtResource("1_h2bkr")
@@ -419,55 +366,6 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "5665565ef85ca38e21b949629983d294"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=766541936]
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1655186519]
-process_mode = 2
-custom_minimum_size = Vector2(180, 100)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -250.0
-offset_right = 90.0
-offset_bottom = -149.99994
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1294355621]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=538591393]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 16
-
-[node name="FruitsNumber" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=744267406]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("6_h6f3h")
-theme_override_font_sizes/font_size = 10
-text = "Blue Fruits: 10"
-horizontal_alignment = 1
-
-[node name="BackButton" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=802145361]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("6_h6f3h")
-theme_override_font_sizes/font_size = 8
-text = "Go back"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=2128357672]
-libraries/ = SubResource("AnimationLibrary_gsbuo")
-
 [connection signal="area_entered" from="EnemyHead" to="EnemyHead" method="_on_area_entered"]
 [connection signal="area_entered" from="EnemyHead2" to="EnemyHead2" method="_on_area_entered"]
 [connection signal="area_entered" from="EnemyHead3" to="EnemyHead3" method="_on_area_entered"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

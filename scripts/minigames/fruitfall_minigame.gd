@@ -3,7 +3,7 @@ extends Node2D
 @onready var fruit_spawn_places: Node2D = $FruitSpawnPlaces
 @onready var witch: CharacterBody2D = $fruitgame_witch
 @onready var kick_label: Label = $KickLabel
-@onready var fruits_number: Label = $CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/FruitsNumber
+
 
 
 const RED_FRUIT = preload("uid://d3qh3xmsxot87")
@@ -51,8 +51,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func check_minigame_end():
 	if get_tree().get_nodes_in_group("fruits").size() == 0:
-		fruits_number.text = "Red Fruits: %s" % str(red_fruits)
-		$CanvasLayer/AnimationPlayer.play("in")
+		await get_tree().create_timer(1.0).timeout
+		Global.added_red_fruits = red_fruits
+		Global.getting_back = true
+		Global.scene_manager.change_2D_scene("res://scenes/forest.tscn", true, false)
 	
 func pause():
 	get_tree().paused = true

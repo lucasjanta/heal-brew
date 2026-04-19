@@ -3,8 +3,15 @@ extends Node
 var scene_manager : Node
 
 var red_fruits : int = 0
-var blue_fruits : int = 0
 var orange_fruits : int = 0
+var blue_fruits : int = 0
+
+
+var added_red_fruits : int = 0
+var added_orange_fruits : int = 0
+var added_blue_fruits : int = 0
+
+var getting_back := false
 
 var forest_first_time := true
 var workplace_first_time := true

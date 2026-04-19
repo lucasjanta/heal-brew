@@ -44,6 +44,7 @@ script = ExtResource("1_kcgab")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_layo1")
 animation = &"available"
+autoplay = "available"
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }

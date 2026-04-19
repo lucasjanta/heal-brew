@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://48pi3ghkuko"]
 
 [node name="blank_gui" type="Control" unique_id=147797678]
-process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 2

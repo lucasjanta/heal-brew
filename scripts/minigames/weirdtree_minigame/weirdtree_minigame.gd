@@ -7,7 +7,7 @@ extends Node2D
 @onready var rock_pos: Marker2D = $slingshot/rock_pos
 @onready var animated_sprite_2d: AnimatedSprite2D = $slingshot/AnimatedSprite2D
 @onready var owl: Node2D = $owl
-@onready var fruits_number: Label = $CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/FruitsNumber
+
 
 
 const ROCK = preload("uid://bakmiu7ucturt")
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	if mouse_pos > 0 and mouse_pos < 320:
 		slingshot.global_position.x = mouse_pos
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click"):
 		animated_sprite_2d.play("pull")
 	if event.is_action_released("click"):
@@ -64,11 +64,10 @@ func check_owl_sight(fruit_dir : String):
 
 
 func _on_animation_player_animation_finished(_anim_name: StringName) -> void:
-	fruits_number.text = "Blue Fruits: %s" % str(blue_fruits)
-	$CanvasLayer/AnimationPlayer.play("in")
-
-func pause():
-	get_tree().paused = true
+	await get_tree().create_timer(1.0).timeout
+	Global.added_blue_fruits = blue_fruits
+	Global.getting_back = true
+	Global.scene_manager.change_2D_scene("res://scenes/forest.tscn", true, false)
 
 
 func _on_delete_fruit_area_area_entered(area: Area2D) -> void:
@@ -79,10 +78,7 @@ func _on_delete_fruit_area_area_entered(area: Area2D) -> void:
 		
 		
 		if fruits_remaining == 1:
-			fruits_number.text = "Blue Fruits: %s" % str(blue_fruits)
-			$CanvasLayer/AnimationPlayer.play("in")
-
-
-
-func _on_back_button_pressed() -> void:
-	Global.blue_fruits += blue_fruits
+			await get_tree().create_timer(1.0).timeout
+			Global.added_blue_fruits = blue_fruits
+			Global.getting_back = true
+			Global.scene_manager.change_2D_scene("res://scenes/forest.tscn", true, false)

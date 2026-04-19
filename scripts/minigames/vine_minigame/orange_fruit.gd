@@ -17,3 +17,5 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "cut":
 		get_parent().orange_fruits += 1
 		queue_free()
+		get_parent().check_empty_fruits()
+		
