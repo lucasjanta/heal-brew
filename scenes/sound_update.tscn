@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dw360wy87gg0h"]
+
+[ext_resource type="Script" uid="uid://bjcqk4u0owx4b" path="res://scripts/UI/sound.gd" id="1_58dlp"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_hvo4k"]
+
+[node name="PanelContainer" type="PanelContainer" unique_id=1075262855]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_58dlp")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1569466835]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=82234698]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=91641422]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1863729692]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hvo4k")
+theme_override_font_sizes/font_size = 4
+text = "music"
+
+[node name="musicSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=684579943]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2084716982]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=959535012]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hvo4k")
+theme_override_font_sizes/font_size = 4
+text = "SFX"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1264344193]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="sfxSlider" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=2071282231]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/musicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer3/sfxSlider" to="." method="_on_sfx_slider_value_changed"]

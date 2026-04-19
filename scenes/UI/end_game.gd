@@ -9,6 +9,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioManager.play_game_over()
 	if Global.king_mistake:
 		king_fail_container.visible = true
 		king_container.visible = false

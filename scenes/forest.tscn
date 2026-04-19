@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="5_qm7rg"]
 [ext_resource type="Texture2D" uid="uid://c3b6yo61cb6wv" path="res://assets/png/orange_fruit.png" id="6_0nboi"]
 [ext_resource type="Texture2D" uid="uid://bihe5dva0jne3" path="res://assets/png/blue_fruit.png" id="7_3knxq"]
+[ext_resource type="PackedScene" uid="uid://dw360wy87gg0h" path="res://scenes/sound_update.tscn" id="10_3knxq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0afsd"]
 texture = ExtResource("1_xijx7")
@@ -326,3 +327,16 @@ text = "- 0"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/FruitsContainer" unique_id=233584530]
 libraries/ = SubResource("AnimationLibrary_ercsu")
+
+[node name="PanelContainer" parent="CanvasLayer" unique_id=1075262855 instance=ExtResource("10_3knxq")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 66.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1

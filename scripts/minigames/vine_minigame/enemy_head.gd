@@ -21,6 +21,7 @@ func _process(delta: float) -> void:
 		#position.x += dir * delta * 80
 
 func attack():
+	AudioManager.play_monster_attack()
 	mouse_pos = get_global_mouse_position()
 	global_position = Vector2(randf_range(min_spawn_range.x, max_spawn_range.x), randf_range(min_spawn_range.y, max_spawn_range.y))
 	if mouse_pos.x > 0 and mouse_pos.x < 320.0:

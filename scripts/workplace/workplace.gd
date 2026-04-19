@@ -7,6 +7,7 @@ var clients : Array
 const CLIENT = preload("uid://dvmyuwltart7")
 
 func _ready() -> void:
+	AudioManager.play_workplace_music()
 	check_day()
 	await get_tree().create_timer(2.0).timeout
 	new_client()

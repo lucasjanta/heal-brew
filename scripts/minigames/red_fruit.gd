@@ -7,6 +7,7 @@ var on_ground := false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is FruitMinigamePlayer and !on_ground:
+		AudioManager.play_fruit_collect()
 		get_parent().red_fruits += 1
 		queue_free()
 		get_parent().check_minigame_end()

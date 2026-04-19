@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://drnj742vc2k5s" path="res://scripts/workplace/workplace.gd" id="1_m38sy"]
 [ext_resource type="Texture2D" uid="uid://cipfg6e5gf01j" path="res://assets/png/cauldron.png" id="2_mypst"]
 [ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_r2ous"]
+[ext_resource type="PackedScene" uid="uid://dw360wy87gg0h" path="res://scenes/sound_update.tscn" id="4_r2ous"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_72r4b"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAmAAAAUklGRh4AAABXRUJQVlA4TBEAAAAvP8EsAAfQ9q43vf+BiOh/AAA=")
@@ -208,5 +209,15 @@ theme_override_constants/outline_size = 6
 theme_override_fonts/font = ExtResource("3_r2ous")
 theme_override_font_sizes/font_size = 10
 text = "0"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1495172599]
+
+[node name="PanelContainer" parent="CanvasLayer2" unique_id=1075262855 instance=ExtResource("4_r2ous")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_right = 66.0
+grow_horizontal = 1
 
 [connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LabButton" to="." method="_on_lab_button_pressed"]

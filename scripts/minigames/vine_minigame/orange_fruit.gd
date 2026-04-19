@@ -15,6 +15,7 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "cut":
+		AudioManager.play_fruit_collect()
 		get_parent().orange_fruits += 1
 		queue_free()
 		get_parent().check_empty_fruits()

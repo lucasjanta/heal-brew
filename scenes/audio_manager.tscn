@@ -1,3 +1,66 @@
 [gd_scene format=3 uid="uid://bc2ubnlc1ix58"]
 
+[ext_resource type="AudioStream" uid="uid://ck5xryuw1vecg" path="res://assets/sfx/Bubble 1.wav" id="1_8qd8g"]
+[ext_resource type="Script" uid="uid://bx7xptt8wla5n" path="res://scripts/Managers/audio_manager.gd" id="1_liach"]
+[ext_resource type="AudioStream" uid="uid://ckfs8dy604880" path="res://assets/sfx/08 - Shop.ogg" id="2_m6ggh"]
+[ext_resource type="AudioStream" uid="uid://u1nki1b5v736" path="res://assets/sfx/Fruit collect 1.wav" id="3_3asnw"]
+[ext_resource type="AudioStream" uid="uid://bqf18dtt1tn33" path="res://assets/sfx/forest_depress.ogg" id="3_aoitu"]
+[ext_resource type="AudioStream" uid="uid://bn466ap0ihsxl" path="res://assets/sfx/workplace.ogg" id="4_njtn3"]
+[ext_resource type="AudioStream" uid="uid://cppr2s7w58b3r" path="res://assets/sfx/Retro Blop StereoUP 04.wav" id="5_kq7b2"]
+[ext_resource type="AudioStream" uid="uid://f5582q3a4ta4" path="res://assets/sfx/Game_Over_2.wav" id="8_02gw7"]
+[ext_resource type="AudioStream" uid="uid://bxj3tgqnpo201" path="res://assets/sfx/Retro Impact Punch 07.wav" id="9_ujhup"]
+[ext_resource type="AudioStream" uid="uid://bmsr2u864ll0w" path="res://assets/sfx/Retro Owl 01.wav" id="10_064dn"]
+[ext_resource type="AudioStream" uid="uid://cr1e2aph0h8jr" path="res://assets/sfx/SerpentBeast_Hiss.wav" id="11_ic5jq"]
+
 [node name="AudioManager" type="Node2D" unique_id=827817798]
+process_mode = 3
+script = ExtResource("1_liach")
+
+[node name="main_menu_music" type="AudioStreamPlayer" parent="." unique_id=1164561899]
+stream = ExtResource("2_m6ggh")
+volume_db = -20.0
+bus = &"Music"
+parameters/looping = true
+
+[node name="forest_music" type="AudioStreamPlayer" parent="." unique_id=2141398361]
+stream = ExtResource("3_aoitu")
+volume_db = -20.0
+bus = &"Music"
+parameters/looping = true
+
+[node name="workplace_music" type="AudioStreamPlayer" parent="." unique_id=1914029426]
+stream = ExtResource("4_njtn3")
+volume_db = -25.0
+bus = &"Music"
+parameters/looping = true
+
+[node name="new_potion_SFX" type="AudioStreamPlayer" parent="." unique_id=2123768624]
+stream = ExtResource("5_kq7b2")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="fruit_drop" type="AudioStreamPlayer" parent="." unique_id=707286011]
+stream = ExtResource("1_8qd8g")
+bus = &"SFX"
+
+[node name="fruit_collect" type="AudioStreamPlayer" parent="." unique_id=770168199]
+stream = ExtResource("3_3asnw")
+bus = &"SFX"
+
+[node name="game_over" type="AudioStreamPlayer" parent="." unique_id=1105583556]
+stream = ExtResource("8_02gw7")
+bus = &"SFX"
+
+[node name="kick" type="AudioStreamPlayer" parent="." unique_id=232772433]
+stream = ExtResource("9_ujhup")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="owl" type="AudioStreamPlayer" parent="." unique_id=537453322]
+stream = ExtResource("10_064dn")
+bus = &"SFX"
+
+[node name="monsterAttack" type="AudioStreamPlayer" parent="." unique_id=1702783574]
+stream = ExtResource("11_ic5jq")
+volume_db = -15.0
+bus = &"SFX"

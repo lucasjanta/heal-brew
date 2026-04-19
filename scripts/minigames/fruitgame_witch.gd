@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func kick():
+	AudioManager.play_kick()
 	animated_sprite_2d.play("kick")
 
 func _on_animated_sprite_2d_animation_finished() -> void:

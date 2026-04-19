@@ -83,6 +83,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		if over_cauldron and fruit_on_hold != "none" and fruits_on_cauldron.size() < 3:
 			fruits_on_cauldron.append(fruit_on_hold)
+			AudioManager.play_fruit_drop()
 			match fruit_on_hold:
 				"red":
 					Global.red_fruits -= 1
@@ -129,6 +130,7 @@ func _on_multi_button_pressed() -> void:
 		cauldron_sprites.play("cauldron_on")
 		multi_button.visible = false
 	if multi_button.text == "take potion!":
+		AudioManager.play_new_potion_sfx()
 		take_potion()
 		
 func _on_cauldron_sprites_animation_finished() -> void:

@@ -27,5 +27,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 func attack():
 	attacking = true
+	AudioManager.play_owl()
 	animated_sprite_2d.play("attack")
 	animation_player.play("attack")

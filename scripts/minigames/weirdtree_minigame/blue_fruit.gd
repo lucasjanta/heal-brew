@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "rock":
+		AudioManager.play_fruit_collect()
 		falling = true
 		get_parent().blue_fruits += 1
 		get_parent().check_owl_sight(side)

@@ -5,6 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	AudioManager.play_forest_music()
 
 func _process(delta: float) -> void:
 	if Global.getting_back:
