@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://1jdw4d2d0iq2"]
+[gd_scene format=3 uid="uid://dtfc2ey1afiqi"]
 
-[ext_resource type="Script" uid="uid://bkt6ve3cgvo1k" path="res://scripts/UI/fruit_fall_tutorial.gd" id="1_q8b4p"]
-[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_q8b4p"]
-[ext_resource type="Texture2D" uid="uid://bg64rtj8w7lgv" path="res://assets/tutorial/fruitfall/1.png" id="3_y4set"]
-[ext_resource type="Texture2D" uid="uid://i2war8g7w7h3" path="res://assets/tutorial/fruitfall/2.png" id="4_3f6rr"]
-[ext_resource type="Texture2D" uid="uid://bwfn86ks4r3wg" path="res://assets/tutorial/fruitfall/2a.png" id="4_b8xuv"]
+[ext_resource type="Script" uid="uid://cp6ita8q8o6ww" path="res://scripts/UI/weird_tree_tutorial.gd" id="1_twloe"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="2_jeh4c"]
+[ext_resource type="Texture2D" uid="uid://c1d1sptv4g5sm" path="res://assets/tutorial/weirdtree/w1.png" id="3_twloe"]
+[ext_resource type="Texture2D" uid="uid://b8ebmychktrj5" path="res://assets/tutorial/weirdtree/w2.png" id="4_jeh4c"]
+[ext_resource type="Texture2D" uid="uid://cexew7swcohov" path="res://assets/tutorial/weirdtree/w3.png" id="5_5t62t"]
 
-[node name="FruitFallTutorial" type="Control" unique_id=536863042]
+[node name="WeirdTreeTutorial" type="Control" unique_id=536863042]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_q8b4p")
+script = ExtResource("1_twloe")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=821101640]
 custom_minimum_size = Vector2(260, 140)
@@ -43,7 +43,7 @@ layout_mode = 2
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1784878315]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_fonts/font = ExtResource("2_jeh4c")
 theme_override_font_sizes/font_size = 8
 text = "skip tutorial"
 
@@ -58,16 +58,16 @@ size_flags_horizontal = 3
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer" unique_id=1327811622]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("3_y4set")
+texture = ExtResource("3_twloe")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer" unique_id=1906280124]
 custom_minimum_size = Vector2(77, 0)
 layout_mode = 2
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_fonts/font = ExtResource("2_jeh4c")
 theme_override_font_sizes/font_size = 6
-text = "walk left and right using   [a/d]"
+text = "control the slingshot using mouse"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -78,16 +78,16 @@ size_flags_horizontal = 3
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer4" unique_id=1305710006]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("4_b8xuv")
+texture = ExtResource("4_jeh4c")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer4" unique_id=1557741981]
 custom_minimum_size = Vector2(77, 0)
 layout_mode = 2
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_fonts/font = ExtResource("2_jeh4c")
 theme_override_font_sizes/font_size = 6
-text = "kick the tree to make fruits fall with [e]"
+text = "hold left button before shooting"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -98,16 +98,16 @@ size_flags_horizontal = 3
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer5" unique_id=1589435894]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("4_3f6rr")
+texture = ExtResource("5_5t62t")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/screen1/VBoxContainer5" unique_id=1463096915]
 custom_minimum_size = Vector2(77, 0)
 layout_mode = 2
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_q8b4p")
+theme_override_fonts/font = ExtResource("2_jeh4c")
 theme_override_font_sizes/font_size = 6
-text = "try to collect all falling fruits"
+text = "avoid getting caught by the owl"
 horizontal_alignment = 1
 autowrap_mode = 2
 

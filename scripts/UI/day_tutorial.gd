@@ -33,4 +33,4 @@ func change_visibility():
 
 
 func _on_button_pressed() -> void:
-	queue_free()
+	Global.scene_manager.change_gui_scene("res://scenes/reset/blank_gui.tscn", true, false)

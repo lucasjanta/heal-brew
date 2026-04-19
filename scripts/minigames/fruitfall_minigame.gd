@@ -58,5 +58,6 @@ func pause():
 	get_tree().paused = true
 
 
-func _on_back_button_pressed() -> void:
-	Global.red_fruits += red_fruits
+#
+#func _on_back_button_pressed() -> void:
+	#Global.red_fruits += red_fruits

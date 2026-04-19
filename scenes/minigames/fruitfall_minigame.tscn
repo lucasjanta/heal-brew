@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://co7eww8gogxku" path="res://scripts/minigames/fruitgame_witch.gd" id="2_6efnl"]
 [ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_uv08p"]
 [ext_resource type="Script" uid="uid://cu30sgg65xokm" path="res://scripts/minigames/falling_fruits/quit_area.gd" id="4_dh2s2"]
+[ext_resource type="Script" uid="uid://bfkelrwbqytnf" path="res://scripts/UI/results.gd" id="5_bufjo"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_uv08p"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAGAQAAUklGRv4AAABXRUJQVlA4TPEAAAAvP8EsAEegpI0kaOGul/Nv4fCx38dJURDJBvU+iqggsxYiqKCAFmoiSWGeYATtiMo9CujnPwC8HhlBa+IOa/m8f2epAKm27bqNKIRC0iIohSL4F0HH8ug8Aln3Aff3PVmZRRH9n4D/4f/h/+H/Z2Dfh//zvw0vX546nqamwbopCdMJlPlaS8YKJWAtWWuZ9VlhntGQB8TkDQRSxKSDaMLuf98NMOSHKtv1nu9wDGXyb28fyU7QuscNf5TVOWZS50BPWOfITA1TgL/7cezSSizC68eSzPYBMghXCNBxf99LwG6eEAhh4JFPSR5M+yQF+YMOAA==")
@@ -374,6 +375,7 @@ offset_right = 90.0
 offset_bottom = -149.99994
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_bufjo")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1487329756]
 layout_mode = 2
@@ -396,6 +398,7 @@ text = "Red Fruits: 10"
 horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=497988416]
+process_mode = 3
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -410,4 +413,4 @@ libraries/ = SubResource("AnimationLibrary_dh2s2")
 [connection signal="body_entered" from="ShakeArea" to="." method="_on_shake_area_body_entered"]
 [connection signal="body_exited" from="ShakeArea" to="." method="_on_shake_area_body_exited"]
 [connection signal="body_entered" from="QuitArea" to="QuitArea" method="_on_body_entered"]
-[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/BackButton" to="CanvasLayer/PanelContainer" method="_on_back_button_pressed"]

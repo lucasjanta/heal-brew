@@ -1,12 +1,16 @@
 extends Area2D
 @onready var interact_label: Label = $InteractLabel
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var can_interact := false
 var available := true
 
 func interact():
-	print("go to minigame")
-
+	available = false
+	animated_sprite_2d.play("unavailable")
+	Global.scene_manager.change_2D_scene("res://scenes/minigames/fruitfall_minigame.tscn", false, false)
+	if Global.fruitfall_first_time:
+		Global.scene_manager.change_gui_scene("res://scenes/UI/fruit_fall_tutorial.tscn", true, false)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player and available:
