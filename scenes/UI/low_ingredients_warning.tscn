@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cyiqblgoblsxq"]
+
+[ext_resource type="Script" uid="uid://bfp2afvs7bimp" path="res://scripts/UI/low_ingredients_warning.gd" id="1_ksaqv"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="1_mj8vk"]
+
+[node name="lowIngredientsWarning" type="Control" unique_id=1461890501]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ksaqv")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1766485230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -46.0
+offset_right = 72.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=2071931325]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=885371897]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1643962510]
+custom_minimum_size = Vector2(136, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_mj8vk")
+theme_override_font_sizes/font_size = 10
+text = "You don't have enough ingredients to make potions"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=57918776]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_mj8vk")
+theme_override_font_sizes/font_size = 8
+text = "End day"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

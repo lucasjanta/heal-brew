@@ -1427,3 +1427,4 @@ metadata/_aseprite_wizard_source_file_hash_ = "1217dc086ca37d79f86bf9fdc5bd8063"
 [connection signal="pressed" from="bookNode/NextPage" to="bookNode" method="_on_next_page_pressed"]
 [connection signal="pressed" from="bookNode/PreviousPage" to="bookNode" method="_on_previous_page_pressed"]
 [connection signal="pressed" from="MultiButton" to="." method="_on_multi_button_pressed"]
+[connection signal="animation_finished" from="newPotion/DeliverPotionAnim" to="." method="_on_deliver_potion_anim_animation_finished"]

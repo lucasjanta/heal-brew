@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://dcmifh6jo8gt3"]
+
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="1_3defy"]
+[ext_resource type="Script" uid="uid://cmimw65ep3q6t" path="res://scenes/UI/end_game.gd" id="1_15o4q"]
+
+[node name="EndGame" type="Control" unique_id=2052205610]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_15o4q")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1715590269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=611463739]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1854560046]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=154299479]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+text = "People Healed: x"
+horizontal_alignment = 1
+
+[node name="MistakesContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=976135253]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MistakesContainer" unique_id=399817295]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 12
+text = "You mixed up the potions and now the villagers are even sicker. Nice job… you’ve been banned from the village! "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="KingContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=823181932]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/KingContainer" unique_id=965161920]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 12
+text = "After you healed the king, he grew afraid of your power and had you burned at the stake... that escalated quickly..."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="KingFailContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1498835157]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/KingFailContainer" unique_id=749142433]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 12
+text = "You gave the king the wrong potion, and he was not amused, now you're locked up in the dungeon."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1855360891]
+layout_mode = 2
+alignment = 1
+
+[node name="CreditsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=337074321]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 14
+text = "credits"
+
+[node name="PlayAgainButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1336221010]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 14
+text = "play again"
+
+[node name="creditsContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=121820357]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/creditsContainer" unique_id=1257659159]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_3defy")
+text = "credits"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/creditsContainer" unique_id=1382280572]
+custom_minimum_size = Vector2(180, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/creditsContainer/PanelContainer" unique_id=138223833]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/creditsContainer/PanelContainer/MarginContainer" unique_id=1549098523]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/creditsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2129191477]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 10
+text = "Art & Programming"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/creditsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1769316278]
+layout_mode = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("1_3defy")
+theme_override_font_sizes/font_size = 12
+text = "pancadev"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/creditsContainer" unique_id=1516729401]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_3defy")
+text = "back"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/creditsContainer/Button" to="." method="_on_button_pressed"]

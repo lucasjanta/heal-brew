@@ -16,6 +16,8 @@ size_override = Vector2(320, 180)
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABMAgAAUklGRkQCAABXRUJQVlA4TDgCAAAvP8EsEDegqG0jpr9xmz/Sg6KkjSQ4uXTZd4fOwqlt24ZNuW7ekvkPAAAMvrxDwX39DiDHtt22ITvgU8CeGKkAjypwaCAWgA36r0ECfsLXl7Mj+u/IbSNHkg+zeeXqSW84RZftXXQA0W2B4Da42yK47eWF2LaXt0LbNl8JLO23tpFxanh+Fyc/iXN4Uag+yF2zXPWoUP33Hz+suc0Gdlk3GJBsqtiHx3kGct8vY22SSm1DaCg9wFkUraPSoy/e7+iQAg64RNrQigp1GVtsR5yKD+pQyq2ksFUdIi6oR9zGM7zGraSMA+OxOvGOpOoKJQPE/o4prIZXisoiBJKO6pXCwfpjGAlV1wc3AKM9p1ZTtP68xgcafn91hrydBfKJOkKr4YgyClwNaRzVEYUduCsU5UxJ7K7jFc4C9SoAUDyDQtXTPYHcIp2BTlDRJtGlFUA4foAfMWdBl5sWsMuv2Bm4bgRJw7kTWrMF9BxnpkJipgZmmvM0XRrqBGVtgKZq57rImdBlnhaQaSwK1aiTKu0oOqfW95xWiXZCm4V2B9huVGkNZ9W+HmnddQU/td6RFmSMZ0ZYYD8tnHGvoEERusNMm7QGtA5VkbWjx6uqGDvXlP+lQJdAQJcw6ZcxEPod/d9/vuEYmDWLgoGJmxpF0rczq4MTJbIkGw+n8TC5f+JyeHnncnwwMMu8WX5nk5/YWJj9mmPNYSU+2Cc+doVssU9amv3+5eN4X2ex8gZmmTfzsZP+/iXE+6YT")
 size_override = Vector2(320, 180)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mypst"]
+
 [node name="Workplace" type="Node2D" unique_id=96866077]
 script = ExtResource("1_m38sy")
 
@@ -141,7 +143,70 @@ texture = ExtResource("2_mypst")
 expand_mode = 1
 
 [node name="LabButton" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=226403286]
+z_index = 10
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_r2ous")
 theme_override_font_sizes/font_size = 6
 text = ">"
+
+[node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer" unique_id=92493303]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = -8.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mypst")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer2" unique_id=421859451]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/MarginContainer" unique_id=435870756]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1010185554]
+layout_mode = 2
+
+[node name="TreatedPeopleLabel" type="Label" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1752697266]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_r2ous")
+theme_override_font_sizes/font_size = 8
+text = "People treated:"
+
+[node name="TreatedNumber" type="Label" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=809172302]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_r2ous")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="Control" type="Control" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=2128546407]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=649571239]
+layout_mode = 2
+
+[node name="MistakesLabel" type="Label" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1633898066]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_r2ous")
+theme_override_font_sizes/font_size = 8
+text = "Mistakes:"
+
+[node name="MistakesNumber" type="Label" parent="CanvasLayer/PanelContainer2/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=975969840]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_r2ous")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/LabButton" to="." method="_on_lab_button_pressed"]

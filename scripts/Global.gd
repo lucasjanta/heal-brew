@@ -18,3 +18,12 @@ var workplace_first_time := true
 var fruitfall_first_time := true
 var vine_first_time := true
 var weird_first_time := true
+
+var day : int = 1
+var potion_created := false
+var potion_in_hand : String = ""
+var people_treated : int = 0
+var mistakes : int = 0
+
+var king_mistake := false
+var king_healed := false

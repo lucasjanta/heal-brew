@@ -27,6 +27,12 @@ var cauldron_on := false
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	update_fruit_number()
+	check_fruits_amount()
+
+func check_fruits_amount():
+	var amount = Global.blue_fruits + Global.red_fruits + Global.orange_fruits
+	if amount < 3:
+		Global.scene_manager.change_gui_scene("res://scenes/UI/low_ingredients_warning.tscn", true, false)
 
 func update_fruit_number():
 	red_fruits_label.text = str(Global.red_fruits)
@@ -188,8 +194,10 @@ func potion_result():
 	$cauldron/fruit_container/fruit3.texture = null
 	if result != "bad_potion":
 		potion_result_anim.play(result)
+		Global.potion_in_hand = result
 	else:
 		potion_result_anim.play("bad_potion")
+		Global.potion_in_hand = ""
 	
 
 func _on_open_book_button_pressed() -> void:
@@ -198,3 +206,9 @@ func _on_open_book_button_pressed() -> void:
 
 func _on_close_book_pressed() -> void:
 	book_node.visible = false
+
+
+func _on_deliver_potion_anim_animation_finished(anim_name: StringName) -> void:
+	Global.potion_created = true
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	Global.scene_manager.change_2D_scene("res://scenes/cart/workplace.tscn", true, false)

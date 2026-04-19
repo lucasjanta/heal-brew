@@ -3,12 +3,16 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $CanvasLayer/FruitsContainer/AnimationPlayer
 @onready var movable_witch: Player = $movable_witch
 
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _process(delta: float) -> void:
 	if Global.getting_back:
 		Global.getting_back = false
 		check_fruits()
 	if movable_witch.global_position.x < -30 or movable_witch.global_position.x > 390.0 or movable_witch.global_position.y > 210.0 or movable_witch.global_position.y < -30:
 		Global.scene_manager.change_2D_scene("res://scenes/cart/workplace.tscn", true, false)
+		Global.scene_manager.change_gui_scene("res://scenes/reset/blank_gui.tscn", true, false)
 
 func check_fruits():
 	if Global.added_red_fruits > 0:
