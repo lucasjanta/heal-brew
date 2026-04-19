@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://csneyds0p2pe5"]
 
 [ext_resource type="Script" uid="uid://drnj742vc2k5s" path="res://scripts/workplace/workplace.gd" id="1_m38sy"]
+[ext_resource type="Texture2D" uid="uid://cipfg6e5gf01j" path="res://assets/png/cauldron.png" id="2_mypst"]
+[ext_resource type="FontFile" uid="uid://dqxs63sxa6pbq" path="res://assets/fonts/GravityBold8.ttf" id="3_r2ous"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_72r4b"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAAAmAAAAUklGRh4AAABXRUJQVlA4TBEAAAAvP8EsAAfQ9q43vf+BiOh/AAA=")
@@ -105,3 +107,41 @@ metadata/_aseprite_wizard_config_ = {
 "source_uid": 6629427913549915013
 }
 metadata/_aseprite_wizard_source_file_hash_ = "9a666142b0bca96092f80bb9484c65ba"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=336265928]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=794458151]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=313485669]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1242350999]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1156829505]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1913467745]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+texture = ExtResource("2_mypst")
+expand_mode = 1
+
+[node name="LabButton" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer" unique_id=226403286]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r2ous")
+theme_override_font_sizes/font_size = 6
+text = ">"

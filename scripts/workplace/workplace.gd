@@ -10,6 +10,7 @@ var day5 : Array = [3, 0, 5]
 const CLIENT = preload("uid://dvmyuwltart7")
 
 func _ready() -> void:
+	await get_tree().create_timer(2.0).timeout
 	new_client()
 
 func new_client():

@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bihe5dva0jne3" path="res://assets/png/blue_fruit.png" id="4_6xubv"]
 [ext_resource type="Script" uid="uid://53hb50n8av1a" path="res://scripts/workplace/cursor.gd" id="5_6xubv"]
 [ext_resource type="Script" uid="uid://defnyyppbng16" path="res://scripts/workplace/bucket.gd" id="6_5nn33"]
+[ext_resource type="Script" uid="uid://brrcpktij84pj" path="res://scripts/workplace/book_node.gd" id="9_qd66p"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_16q11"]
 _data = PackedByteArray("AAADAAUAAAABAAAAQAEAALQAAABUAQAAUklGRkwBAABXRUJQVlA4TD8BAAAvP8EsAF+gNpLUZog8ZHRAa/SOXK5SFEWS1LwuHxleGEgSUIZ7swFQ1FhsnOh/M9P8h0jXWTADBAsnaO+PVCBz1/vS6+QbcFtr25q8uMsInExgC2AD6L9HOlrKlGn/LnUqeraL63tiQET/HbiNpEjOMh7fH0Sw0U6JqX8RwUr1uPpA9KNB4OGRIUQ8UAF2+rgkoFABiCT6VFzI6UMkolQpF3ZQ9QCi6rmwhopX1Leh/HeiZ0SQTFp9ZHcWgUa8pf88ledx1Q/IvArimXEcIJzJylY1gg3qrAHoGVe+ybRwkFuJvSw1qfwqmoFlTemByo5TNDK3koMDNRmZW8XjuC41BthNvLzN5IAew6huon6TaU3en2ALehOThFRRkPn/dxViy8hmDJzjGsbZn+Oqv/gdwhC9/v77++/vv7//Wl0SAA==")
@@ -491,6 +492,14 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_q6l1f"]
 radius = 15.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qd66p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syvtf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eotdi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ng88r"]
+
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_q6l1f"]
 _data = PackedByteArray("AAADAAUAAAABAAAAIAAAACAAAABWAAAAUklGRk4AAABXRUJQVlA4TEIAAAAvH8AHABcgEEhxBgssEEhxGnssFkzx/kCa/8BfBQoaSXEuSGgm0AMeyevsRUBE/ycAw2pd/w4N+BgN/B8YRnZtDUM=")
 size_override = Vector2(32, 32)
@@ -616,6 +625,61 @@ animations = [{
 }],
 "loop": true,
 "name": &"loop",
+"speed": 10.0
+}]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_syvtf"]
+_data = PackedByteArray("AAADAAUAAAABAAAAuAEAAPAAAABQBQAAUklGRkgFAABXRUJQVlA4TDsFAAAvt8E7EH+gNpKt5Ev0ccnIHBqmH/qhIUWRJDWX7wge4MU7mcQBhVtFjSQpm1WAh9JOzEm+L8P8BwAAgCqZXA0Tcek72tV/7e7JQ/04H4rSsnebOyozB9CR/79t7Gi2dlL/IhrujOCo2Ruo23LnXSF3kaqdhBN4RlfY0tn+02HREtX2L10gtg4YA+D/j/AHJTkpov8S3DaSJIkxM7t1ws7ao/oLE1HVTGpreaUuB7W1FDvcGHzklxA5M03EK5W23pbAG2yxLTvu+rpbAneQqeWCbcueNhMAIj/7C/zmtiypi2jJxJ3r1wHc/vSWhjeToeXxYrFwX0yYDABKsBB8/wKVuPPFen39utv/7chZfO3PY8twZ8iW3JlRUmT3er0+Xd/6toCip5Rw/HV1QHw5dtye635j7LiLoTYw+zIv5IitBEBw5uiB4/DEmgjhNsbO+vT6dYDRQrwQVabgKSNnJgTAKcDICd/Qyyn1Sa7Qn06AQupqCfAvuZYieij50o5Myzfi/UrImLb+lkUmY9raWu79tx3q+hp0fa0tgS+pMYC0rAPUC88VnSFKfMRN426DZ0DlbCmIRzQm5Gqp8QyJuj5u+WWr8cdSXo+0LO+uUg2eIU6PiVv+uy4t/ljSXJieoRHqNZ3GgD4qolwpfH1Vk+aVvYxGSN7g64K1Z0jLBBIls7hggzoSjZCVxDNkpckMr6y9vOFJIQaCDNn4iGiEMF4OPiOeIQOp3GifRuMZonUMfvxpX/gfaISg/aNHOvGUwQpGZUjysXfo/4xQGcwzay+RLSMeRejjQVqJ5Ek65dlz30aSEc7/8i62NlRLdM1lXIYiLjx/foakDUXExZZXaTxP5hulwXPFZ0hx12vwDOiNuEga9lZKLRsiAzKR8OUPrZylxh9LZsM/0yy1SrUNmiEduvwDrdNq9LHkQ8Wj0WsenyGFbN1oPEMydPmH3GWIVqk2r7SWRPz4DOmPhqiSLGb577oIDZGHhax5mbSMziFdBE3kq0xtLff+2+cAuIO/aVr2vHW1twTeoPKWHXd93S0Nd2YLbZk977jG3eHmSl0Oams5qctkm2y52TZ2uYsNPvJLiJyZJt5QyqUtl/dakUHfvngDGvA236g67npKx90JBWJYVoAC3M1JPRu9AROho/W8HdEMbyaU0HLmAn0JPhaTyzKZicxm/k7Bt9ieGdpv1tpfcptpGSyL7yLi0sa39GGdYMeXPN4Zti8+gmNMbsFChh25w77F6/f9c9zB2PeFENXt3iKV+391HC/jKumdoSbl3mPHRuznxo2sXNoMef8lTEQPpVzafHmZeiPer4RyaTPm5aPIlEubMe/ef9u8rucv7DZsWYOjkyGoAwxBHeacCIzUeJ5SpB5DstUZST227qomo7sNUx1bcqWWeqgf6nBoxqVm5STKdGqiM7AS1+auUg1PgLhg7Vl8hmLQjbiWOO67X1l72XeKy5CBRMl0eDOU3O5IIfAMmQQJQ0iGj5VSh6iElgNBdsaXPbP2kn9qcRmSSBEs5DDSIINUfrQXdotriWfUWHY+p6Bz4fnzMy8uQ5LzR+8OyUePNAVLm9TyY+8Qzc7p80fpG8lH2CKcPwrWNzziLFHxLRFo9so+WxXROi0tdu56zbhyl+WzUmpZswy7Df139G7bto3JpVWqbdDsI0IKHRdJulY6F9m60WitmmVNS8qWaZSl5t37bz8L4A4owN18Z9Tz1tF63o5owBvQgLc5qeOup3TcnVAMd4ZiuLu2UWUuWWPcMu8MO9xcqctBbS0ndZlM6jIBAA==")
+size_override = Vector2(440, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa7rc"]
+atlas = SubResource("PortableCompressedTexture2D_syvtf")
+region = Rect2(0, 0, 220, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q41lp"]
+atlas = SubResource("PortableCompressedTexture2D_syvtf")
+region = Rect2(220, 0, 220, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d2fw"]
+atlas = SubResource("PortableCompressedTexture2D_syvtf")
+region = Rect2(0, 120, 220, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pyq2"]
+atlas = SubResource("PortableCompressedTexture2D_syvtf")
+region = Rect2(220, 120, 220, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3r3k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oa7rc")
+}],
+"loop": true,
+"name": &"page1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q41lp")
+}],
+"loop": true,
+"name": &"page2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d2fw")
+}],
+"loop": true,
+"name": &"page3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pyq2")
+}],
+"loop": true,
+"name": &"page4",
 "speed": 10.0
 }]
 
@@ -997,6 +1061,17 @@ text = "Open book
 (left click)"
 horizontal_alignment = 1
 
+[node name="OpenBookButton" type="Button" parent="BookInteract" unique_id=561365000]
+custom_minimum_size = Vector2(30, 30)
+offset_left = -16.0
+offset_top = -15.0
+offset_right = 14.0
+offset_bottom = 15.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qd66p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_syvtf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eotdi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ng88r")
+
 [node name="red_fruit_crate" type="Area2D" parent="." unique_id=1416085755]
 position = Vector2(23, 74)
 
@@ -1202,6 +1277,60 @@ metadata/_aseprite_wizard_source_file_hash_ = "af86b4674cf886f6f23b260cbb3f27a8"
 [node name="Marker2D" type="Marker2D" parent="tap" unique_id=2138399492]
 position = Vector2(303, 122)
 
+[node name="bookNode" type="Node2D" parent="." unique_id=1754160098]
+visible = false
+position = Vector2(162, 91)
+script = ExtResource("9_qd66p")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bookNode" unique_id=69484235]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_p3r3k")
+animation = &"page1"
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/book.aseprite",
+"source_uid": 8030510139531363334
+}
+metadata/_aseprite_wizard_source_file_hash_ = "97f87a91f22348e9a3a9577e753cddc7"
+
+[node name="CloseBook" type="Button" parent="bookNode" unique_id=106353092]
+offset_left = -22.0
+offset_top = -78.0
+offset_right = 23.0
+offset_bottom = -62.0
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 8
+text = "close"
+
+[node name="NextPage" type="Button" parent="bookNode" unique_id=1479078102]
+offset_left = 8.0
+offset_top = 36.0
+offset_right = 22.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 8
+text = ">"
+
+[node name="PreviousPage" type="Button" parent="bookNode" unique_id=763890066]
+offset_left = -22.0
+offset_top = 36.0
+offset_right = -8.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("1_365ak")
+theme_override_font_sizes/font_size = 8
+text = "<"
+
 [node name="cursor" type="Node2D" parent="." unique_id=645148405]
 script = ExtResource("5_6xubv")
 
@@ -1282,6 +1411,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "1217dc086ca37d79f86bf9fdc5bd8063"
 [connection signal="animation_finished" from="cauldron/cauldron_sprites" to="." method="_on_cauldron_sprites_animation_finished"]
 [connection signal="mouse_entered" from="cauldron/cauldron_mouth" to="." method="_on_cauldron_mouth_mouse_entered"]
 [connection signal="mouse_exited" from="cauldron/cauldron_mouth" to="." method="_on_cauldron_mouth_mouse_exited"]
+[connection signal="pressed" from="BookInteract/OpenBookButton" to="." method="_on_open_book_button_pressed"]
 [connection signal="mouse_entered" from="red_fruit_crate" to="." method="_on_red_fruit_crate_mouse_entered"]
 [connection signal="mouse_exited" from="red_fruit_crate" to="." method="_on_red_fruit_crate_mouse_exited"]
 [connection signal="mouse_entered" from="orange_fruit_crate" to="." method="_on_orange_fruit_crate_mouse_entered"]
@@ -1293,4 +1423,7 @@ metadata/_aseprite_wizard_source_file_hash_ = "1217dc086ca37d79f86bf9fdc5bd8063"
 [connection signal="mouse_entered" from="bucket" to="bucket" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="bucket" to="bucket" method="_on_mouse_exited"]
 [connection signal="animation_finished" from="bucket/AnimatedSprite2D" to="bucket" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="pressed" from="bookNode/CloseBook" to="." method="_on_close_book_pressed"]
+[connection signal="pressed" from="bookNode/NextPage" to="bookNode" method="_on_next_page_pressed"]
+[connection signal="pressed" from="bookNode/PreviousPage" to="bookNode" method="_on_previous_page_pressed"]
 [connection signal="pressed" from="MultiButton" to="." method="_on_multi_button_pressed"]

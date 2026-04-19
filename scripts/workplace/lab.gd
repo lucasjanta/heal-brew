@@ -12,6 +12,7 @@ extends Node2D
 @onready var blue_fruits_label: Label = $blue_fruit_crate/BlueFruitsLabel
 
 @onready var deliver_potion_anim: AnimationPlayer = $newPotion/DeliverPotionAnim
+@onready var book_node: Node2D = $bookNode
 
 
 var fruit_under : String = "none"
@@ -164,15 +165,15 @@ func potion_result():
 	var result : String
 	print(fruits_on_cauldron.count("red"))
 	if fruits_on_cauldron.count("red") == 3:
-		result = "red_potion"
+		result = "red_potion" #done
 	elif fruits_on_cauldron.count("red") == 2 and fruits_on_cauldron.count("blue") == 1:
-		result = "purple_potion"
+		result = "purple_potion" #done
 	elif fruits_on_cauldron.count("orange") == 3:
-		result = "yellow_potion"
+		result = "yellow_potion" #done
 	elif fruits_on_cauldron.count("orange") == 2 and fruits_on_cauldron.count("red") == 1:
-		result = "orange_potion"
+		result = "orange_potion" #done
 	elif fruits_on_cauldron.count("blue") == 3:
-		result = "blue_potion"
+		result = "blue_potion" #done
 	elif fruits_on_cauldron.count("blue") == 2 and fruits_on_cauldron.count("orange") == 1:
 		result = "green_potion"
 	elif fruits_on_cauldron.count("blue") == 1 and fruits_on_cauldron.count("orange") == 1 and fruits_on_cauldron.count("red") == 1:
@@ -190,3 +191,10 @@ func potion_result():
 	else:
 		potion_result_anim.play("bad_potion")
 	
+
+func _on_open_book_button_pressed() -> void:
+	book_node.visible = true
+
+
+func _on_close_book_pressed() -> void:
+	book_node.visible = false
