@@ -17,6 +17,8 @@ func _ready() -> void:
 	if disease == "":
 		disease = diseases.pick_random()
 		disease_sprite.play(disease)
+	else:
+		disease_sprite.play(disease)
 
 func _process(delta: float) -> void:
 	if leaving:
@@ -52,8 +54,14 @@ func _on_deliver_button_pressed() -> void:
 		print("and the delivered potion was %s" %  Global.potion_in_hand)
 		if desired_potion == Global.potion_in_hand:
 			Global.people_treated += 1
+			if disease == "forever":
+				Global.king_healed = true
 		else:
 			Global.mistakes += 1
+			if disease == "forever":
+				Global.king_mistake = true
+	
+		
 		get_parent().update_ui()
 		leaving = true
 		animation_player.play("leave")

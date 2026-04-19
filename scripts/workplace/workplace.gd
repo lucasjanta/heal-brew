@@ -12,6 +12,16 @@ func _ready() -> void:
 	new_client()
 
 func new_client():
+	if Global.day == 5:
+		var new_client = CLIENT.instantiate()
+		var client_chosen = clients.pick_random()
+		clients.erase(client_chosen)
+		new_client.client = client_chosen
+		new_client.disease = "forever"
+		new_client.global_position.x = randf_range(50.0, 270.0)
+		add_child(new_client)
+		return
+	
 	if clients.size() > 0:
 		var new_client = CLIENT.instantiate()
 		var client_chosen = clients.pick_random()
@@ -20,7 +30,7 @@ func new_client():
 		new_client.global_position.x = randf_range(50.0, 270.0)
 		add_child(new_client)
 	else:
-		if Global.mistakes > 2:
+		if Global.mistakes > 2 or Global.king_healed or Global.king_mistake:
 				Global.scene_manager.change_gui_scene("res://scenes/UI/end_game.tscn", true, false)
 				Global.scene_manager.change_2D_scene("res://scenes/reset/blank_2d.tscn", true, false)
 				get_tree().paused = true
